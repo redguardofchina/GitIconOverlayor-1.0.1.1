@@ -17,7 +17,7 @@ namespace TortoiseNotPushedIconOverlayor
             return true;
         }
 
-        private static Icon NotPushIcon = new Icon(@"D:\Users\jianglong\Pictures\XPStyle\NotPush.ico");
+        private static Icon NotPushIcon = new Icon(ResourceUtil.ReadStream("NotPushed.ico"));
 
         protected override Icon GetOverlayIcon()
         {
