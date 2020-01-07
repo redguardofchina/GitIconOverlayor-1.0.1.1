@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonUtils", "..\CommonUti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TortoiseNotPushedIconOverlayHandler", "TortoiseNotPushedIconOverlayHandler\TortoiseNotPushedIconOverlayHandler.csproj", "{564C8B20-72D1-4548-B37F-8341C060B464}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TortoiseNotPushedIconOverlayor", "TortoiseNotPushedIconOverlayor\TortoiseNotPushedIconOverlayor.csproj", "{844C3B26-92E9-4D81-BCC2-275FB017686C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TortoiseGitNotPushedIconOverlayor", "TortoiseNotPushedIconOverlayor\TortoiseGitNotPushedIconOverlayor.csproj", "{844C3B26-92E9-4D81-BCC2-275FB017686C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

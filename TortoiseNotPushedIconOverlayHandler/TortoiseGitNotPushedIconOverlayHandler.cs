@@ -5,11 +5,11 @@ using SharpShell.SharpIconOverlayHandler;
 using System.Drawing;
 using System.Runtime.InteropServices;
 
-namespace TortoiseNotPushedIconOverlayHandler
+namespace TortoiseGitNotPushedIconOverlayHandler
 {
     [ComVisible(true)]
     [RegistrationName("  Tortoise0NotPushed")]
-    class TortoiseNotPushedIconOverlayHandler : SharpIconOverlayHandler
+    class TortoiseGitNotPushedIconOverlayHandler : SharpIconOverlayHandler
     {
         protected override bool CanShowOverlay(string path, FILE_ATTRIBUTE attributes)
         {

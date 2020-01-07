@@ -7,8 +7,8 @@
     <ProjectGuid>{564C8B20-72D1-4548-B37F-8341C060B464}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TortoiseNotPushedIconOverlayHandler</RootNamespace>
-    <AssemblyName>TortoiseNotPushedIconOverlayHandler</AssemblyName>
+    <RootNamespace>TortoiseGitNotPushedIconOverlayHandler</RootNamespace>
+    <AssemblyName>TortoiseGitNotPushedIconOverlayHandler</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,7 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TortoiseNotPushedIconOverlayHandler.cs" />
+    <Compile Include="TortoiseGitNotPushedIconOverlayHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="NotPushed.ico" />

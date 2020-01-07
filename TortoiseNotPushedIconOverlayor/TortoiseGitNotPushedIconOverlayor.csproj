@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{844C3B26-92E9-4D81-BCC2-275FB017686C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>TortoiseNotPushedIconOverlayor</RootNamespace>
-    <AssemblyName>TortoiseNotPushedIconOverlayor</AssemblyName>
+    <RootNamespace>TortoiseGitNotPushedIconOverlayor</RootNamespace>
+    <AssemblyName>TortoiseGitNotPushedIconOverlayor</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>

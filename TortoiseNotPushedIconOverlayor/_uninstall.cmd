@@ -1,4 +1,4 @@
 echo 请在管理员模式下运行
 pause
-RegAsm.exe TortoiseNotPushedIconOverlayor.dll /u
+RegAsm.exe TortoiseGitNotPushedIconOverlayor.dll /u
 pause
