@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CommonUtils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,19 @@ namespace TortoiseNotPushedIconOverlayor
         public MainWindow()
         {
             InitializeComponent();
+
+            ButtonInstall.Click += ButtonInstall_Click;
+            ButtonUninstall.Click += ButtonUninstall_Click;
+        }
+
+        private void ButtonInstall_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(PathUtil.Base);
+        }
+
+        private void ButtonUninstall_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(PathUtil.Base);
         }
     }
 }

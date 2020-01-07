@@ -45,7 +45,6 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
@@ -93,8 +92,14 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="_install.cmd" />
+    <None Include="_uninstall.cmd" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\CommonUtils-dot-net\CommonUtils\CommonUtils.csproj">
+      <Project>{173ba26b-af8c-4949-a7ce-1e832296adfe}</Project>
+      <Name>CommonUtils</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TortoiseNotPushedIconOverlayHandler\TortoiseNotPushedIconOverlayHandler.csproj">
       <Project>{564c8b20-72d1-4548-b37f-8341c060b464}</Project>
       <Name>TortoiseNotPushedIconOverlayHandler</Name>
@@ -102,6 +107,11 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RegAsm.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
