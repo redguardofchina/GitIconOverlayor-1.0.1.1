@@ -2,6 +2,6 @@
     <Grid Background="#cccccc">
         <Button Content="安装" HorizontalAlignment="Center" Margin="0,30,200,0" VerticalAlignment="Top" Width="75" Name="ButtonInstall" />
         <Button Content="卸载" HorizontalAlignment="Center" Margin="200,30,0,0" VerticalAlignment="Top" Width="75" Name="ButtonUninstall" />
-        <TextBox HorizontalAlignment="Center" Height="300" Margin="0,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="500" VerticalScrollBarVisibility="Visible" IsReadOnly="True" />
+        <TextBox HorizontalAlignment="Center" Height="300" Margin="0,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="500" VerticalScrollBarVisibility="Visible" IsReadOnly="True" Name="TextBoxLog" />
     </Grid>
 </Window>

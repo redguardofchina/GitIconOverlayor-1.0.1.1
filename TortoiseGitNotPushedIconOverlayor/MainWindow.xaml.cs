@@ -31,20 +31,25 @@ namespace TortoiseGitNotPushedIconOverlayor
 
         private const string _asmPath = @"C:\Windows\Microsoft.NET\Framework64\v4.0.30319\RegAsm.exe";
         //private static string _asmPath = PathUtil.GetFull("RegAsm.exe");
-        private static string _dllPath = PathUtil.GetFull("TortoiseGitNotPushedIconOverlayHandler.dll");
+        //private static string _dllPath = PathUtil.GetFull("TortoiseGitNotPushedIconOverlayHandler.dll");
+        private static string _dllPath = "TortoiseGitNotPushedIconOverlayHandler1.dll";
+
         private static string _installCommand = string.Format("{0} {1} /codebase", _asmPath, _dllPath);
         private static string _uninstallCommand = string.Format("{0} {1} /u", _asmPath, _dllPath);
 
         private void ButtonInstall_Click(object sender, RoutedEventArgs e)
         {
             //MessageBox.Show(FileUtil.Exists(_asmPath) + " " + _asmPath);
-            CommandUtil.Run(_installCommand);
+            //TextBoxLog.Log(CommandUtil.Run(_installCommand));
+            //TextBoxLog.Log(CommandUtil.Execute("ipconfig/all"));
+            //TextBoxLog.Log(ProcessUtil.Run(_asmPath, _dllPath));
+            TextBoxLog.Log(CommandUtil.Ping("192.168.1.1"));
         }
 
         private void ButtonUninstall_Click(object sender, RoutedEventArgs e)
         {
             //MessageBox.Show(FileUtil.Exists(_dllPath) + " " + _dllPath);
-            CommandUtil.Run(_uninstallCommand);
+            TextBoxLog.Log(CommandUtil.Run(_uninstallCommand));
         }
     }
 }
