@@ -57,5 +57,11 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CommonUtils-dot-net\CommonUtils\CommonUtils.csproj">
+      <Project>{173ba26b-af8c-4949-a7ce-1e832296adfe}</Project>
+      <Name>CommonUtils</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

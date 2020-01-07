@@ -1,1 +1,4 @@
-ï»¿%windir%\regasm.exe ClassLibrary-TortoiseShell.dll /u
+echo ÇëÔÚ¹ÜÀíÔ±Ä£Ê½ÏÂÔËĞĞ
+pause
+%windir%\regasm.exe ClassLibrary-TortoiseShell.dll /u
+pause
