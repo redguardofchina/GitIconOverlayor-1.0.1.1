@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonUtils", "..\CommonUtils-dot-net\CommonUtils\CommonUtils.csproj", "{173BA26B-AF8C-4949-A7CE-1E832296ADFE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TortoiseNotPushedIconOverlayor", "TortoiseNotPushedIconOverlayor\TortoiseNotPushedIconOverlayor.csproj", "{59AF0E86-6EF0-4B05-92D3-9CE4732DAA1C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TortoiseNotPushedIconOverlayHandler", "TortoiseNotPushedIconOverlayHandler\TortoiseNotPushedIconOverlayHandler.csproj", "{564C8B20-72D1-4548-B37F-8341C060B464}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TortoiseNotPushedIconOverlayor", "TortoiseNotPushedIconOverlayor\TortoiseNotPushedIconOverlayor.csproj", "{844C3B26-92E9-4D81-BCC2-275FB017686C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,18 +22,18 @@ Global
 		{173BA26B-AF8C-4949-A7CE-1E832296ADFE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{173BA26B-AF8C-4949-A7CE-1E832296ADFE}.Test|Any CPU.ActiveCfg = Test|Any CPU
 		{173BA26B-AF8C-4949-A7CE-1E832296ADFE}.Test|Any CPU.Build.0 = Test|Any CPU
-		{59AF0E86-6EF0-4B05-92D3-9CE4732DAA1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{59AF0E86-6EF0-4B05-92D3-9CE4732DAA1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{59AF0E86-6EF0-4B05-92D3-9CE4732DAA1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{59AF0E86-6EF0-4B05-92D3-9CE4732DAA1C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{59AF0E86-6EF0-4B05-92D3-9CE4732DAA1C}.Test|Any CPU.ActiveCfg = Release|Any CPU
-		{59AF0E86-6EF0-4B05-92D3-9CE4732DAA1C}.Test|Any CPU.Build.0 = Release|Any CPU
 		{564C8B20-72D1-4548-B37F-8341C060B464}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{564C8B20-72D1-4548-B37F-8341C060B464}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{564C8B20-72D1-4548-B37F-8341C060B464}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{564C8B20-72D1-4548-B37F-8341C060B464}.Release|Any CPU.Build.0 = Release|Any CPU
 		{564C8B20-72D1-4548-B37F-8341C060B464}.Test|Any CPU.ActiveCfg = Release|Any CPU
 		{564C8B20-72D1-4548-B37F-8341C060B464}.Test|Any CPU.Build.0 = Release|Any CPU
+		{844C3B26-92E9-4D81-BCC2-275FB017686C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{844C3B26-92E9-4D81-BCC2-275FB017686C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{844C3B26-92E9-4D81-BCC2-275FB017686C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{844C3B26-92E9-4D81-BCC2-275FB017686C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{844C3B26-92E9-4D81-BCC2-275FB017686C}.Test|Any CPU.ActiveCfg = Release|Any CPU
+		{844C3B26-92E9-4D81-BCC2-275FB017686C}.Test|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
