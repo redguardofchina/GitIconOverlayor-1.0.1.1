@@ -17,11 +17,11 @@ namespace TortoiseNotPushedIconOverlayor
             return true;
         }
 
-        private static Icon NotPushIcon = new Icon(ResourceUtil.ReadStream("NotPushed.ico"));
+        private static Icon _notPushIcon = new Icon(ResourceUtil.ReadStream("NotPushed.ico"));
 
         protected override Icon GetOverlayIcon()
         {
-            return NotPushIcon;
+            return _notPushIcon;
         }
 
         /// <summary>
