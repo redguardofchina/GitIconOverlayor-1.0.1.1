@@ -5,7 +5,7 @@ using SharpShell.SharpIconOverlayHandler;
 using System.Drawing;
 using System.Runtime.InteropServices;
 
-namespace TortoiseNotPushedIconOverlayor
+namespace TortoiseNotPushedIconOverlayHandler
 {
     [ComVisible(true)]
     [RegistrationName("  Tortoise0NotPushed")]

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("TortoiseNotPushedIconOverlayor")]
+[assembly: AssemblyTitle("TortoiseNotPushedIconOverlayHandler")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("TortoiseNotPushedIconOverlayor")]
+[assembly: AssemblyProduct("TortoiseNotPushedIconOverlayHandler")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("59af0e86-6ef0-4b05-92d3-9ce4732daa1c")]
+[assembly: Guid("564c8b20-72d1-4548-b37f-8341c060b464")]
 
 // 程序集的版本信息由下列四个值组成: 
 //

@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{59AF0E86-6EF0-4B05-92D3-9CE4732DAA1C}</ProjectGuid>
+    <ProjectGuid>{564C8B20-72D1-4548-B37F-8341C060B464}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TortoiseNotPushedIconOverlayor</RootNamespace>
-    <AssemblyName>TortoiseNotPushedIconOverlayor</AssemblyName>
+    <RootNamespace>TortoiseNotPushedIconOverlayHandler</RootNamespace>
+    <AssemblyName>TortoiseNotPushedIconOverlayHandler</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -30,10 +30,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationIcon>
-    </ApplicationIcon>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -49,10 +45,18 @@
     <Compile Include="TortoiseNotPushedIconOverlayHandler.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="NotPushed.ico" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="_install.cmd">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="_uninstall.cmd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RegAsm.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
@@ -66,9 +70,6 @@
     <PackageReference Include="SharpShell">
       <Version>2.7.2</Version>
     </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="NotPushed.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
