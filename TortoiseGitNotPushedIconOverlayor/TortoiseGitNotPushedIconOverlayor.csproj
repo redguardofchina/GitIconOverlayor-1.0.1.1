@@ -105,7 +105,9 @@
     <None Include="_install.cmd">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="_uninstall.cmd" />
+    <None Include="_uninstall.cmd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\CommonUtils-dot-net\CommonUtils\CommonUtils.csproj">

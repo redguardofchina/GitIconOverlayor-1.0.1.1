@@ -9,7 +9,7 @@ namespace TortoiseGitNotPushedIconOverlayHandler
 {
     [ComVisible(true)]
     [RegistrationName("  Tortoise0NotPushed")]
-    class TortoiseGitNotPushedIconOverlayHandler : SharpIconOverlayHandler
+    public class TortoiseGitNotPushedIconOverlayHandler : SharpIconOverlayHandler
     {
         protected override bool CanShowOverlay(string path, FILE_ATTRIBUTE attributes)
         {
