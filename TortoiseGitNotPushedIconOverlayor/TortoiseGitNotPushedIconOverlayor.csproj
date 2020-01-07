@@ -100,6 +100,10 @@
       <Project>{173ba26b-af8c-4949-a7ce-1e832296adfe}</Project>
       <Name>CommonUtils</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TortoiseGitNotPushedIconOverlayHandler\TortoiseGitNotPushedIconOverlayHandler.csproj">
+      <Project>{564c8b20-72d1-4548-b37f-8341c060b464}</Project>
+      <Name>TortoiseGitNotPushedIconOverlayHandler</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="favicon.ico" />
