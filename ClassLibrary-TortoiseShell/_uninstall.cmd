@@ -1,0 +1,1 @@
+﻿%windir%\regasm.exe ClassLibrary-TortoiseShell.dll /u
