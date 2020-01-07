@@ -14,7 +14,14 @@ namespace TortoiseGitNotPushedIconOverlayHandler
         protected override bool CanShowOverlay(string path, FILE_ATTRIBUTE attributes)
         {
             LogUtil.Log(path);
-            return true;
+
+            if (FileSystem.IsFile(path))
+                return false;
+
+            if (FloderUtil.Exists(path.Combine(".git")))
+                return true;
+
+            return false;
         }
 
         private static Icon _notPushIcon = new Icon(ResourceUtil.ReadStream("NotPushed.ico"));

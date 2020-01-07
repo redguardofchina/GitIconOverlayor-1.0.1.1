@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TortoiseGitNotPushedIconOve
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TortoiseGitNotPushedIconOverlayHandler", "TortoiseGitNotPushedIconOverlayHandler\TortoiseGitNotPushedIconOverlayHandler.csproj", "{564C8B20-72D1-4548-B37F-8341C060B464}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonUtils.Test", "..\CommonUtils-dot-net\CommonUtils.Test\CommonUtils.Test.csproj", "{1A4CFB16-9160-46C6-8D5D-AD373C050504}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +36,12 @@ Global
 		{564C8B20-72D1-4548-B37F-8341C060B464}.Release|Any CPU.Build.0 = Release|Any CPU
 		{564C8B20-72D1-4548-B37F-8341C060B464}.Test|Any CPU.ActiveCfg = Release|Any CPU
 		{564C8B20-72D1-4548-B37F-8341C060B464}.Test|Any CPU.Build.0 = Release|Any CPU
+		{1A4CFB16-9160-46C6-8D5D-AD373C050504}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A4CFB16-9160-46C6-8D5D-AD373C050504}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A4CFB16-9160-46C6-8D5D-AD373C050504}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A4CFB16-9160-46C6-8D5D-AD373C050504}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A4CFB16-9160-46C6-8D5D-AD373C050504}.Test|Any CPU.ActiveCfg = Release|Any CPU
+		{1A4CFB16-9160-46C6-8D5D-AD373C050504}.Test|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
