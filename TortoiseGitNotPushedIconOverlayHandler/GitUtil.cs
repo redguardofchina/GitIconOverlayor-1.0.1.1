@@ -18,14 +18,9 @@ namespace TortoiseGitNotPushedIconOverlayHandler
             Pushed
         }
 
-        private static string[] _toCommitKeywords = new string[] {
-            "(use \"git add <file>...\" to include in what will be committed)",
-             "Changes not staged for commit:"
-        };
-
         private const string _committedKeywords = "nothing to commit, working tree clean";
 
-        private const string _toPushKeywords = "(use \"git push\" to publish your local commits)";
+        private const string _notPushedKeywords = "(use \"git push\" to publish your local commits)";
 
 
         public static GitStatus GetStatus(string floder)
@@ -38,7 +33,7 @@ namespace TortoiseGitNotPushedIconOverlayHandler
             if (!result.Result.Contains(_committedKeywords))
                 return GitStatus.Modified;
 
-            if (result.Result.Contains(_toPushKeywords))
+            if (result.Result.Contains(_notPushedKeywords))
                 return GitStatus.Committed;
 
             return GitStatus.Pushed;

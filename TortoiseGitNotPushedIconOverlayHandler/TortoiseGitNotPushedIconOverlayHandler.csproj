@@ -59,10 +59,10 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="documents\git-toPush.txt" />
+    <Resource Include="documents\git-committed.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="documents\git-toCommit.txt" />
+    <Resource Include="documents\git-modified.txt" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="documents\git-pushed.txt" />
@@ -71,7 +71,7 @@
     <None Include="documents\log-20200108.log" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="documents\git-toAdd.txt" />
+    <Content Include="documents\git-added.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
