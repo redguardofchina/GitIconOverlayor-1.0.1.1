@@ -1,0 +1,26 @@
+﻿(4)[2020/01/08 13:01:20.323]
+cmd.exe /cgit status @D:\Subversion\TortoiseGitNotPushedIconOverlayor
+
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+
+(3)[2020/01/08 13:01:20.322]
+False
+
+(2)[2020/01/08 13:01:20.217]
+cmd.exe /cgit status @D:\Subversion\CommonUtils-dot-net
+
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+
+(1)[2020/01/08 13:01:20.214]
+False
+
