@@ -1,0 +1,24 @@
+﻿(4)[2020/01/08 13:03:38.343]
+cmd.exe /cgit status @D:\Subversion\TortoiseGitNotPushedIconOverlayor
+
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+
+(3)[2020/01/08 13:03:38.343]
+False
+
+(2)[2020/01/08 13:03:38.239]
+cmd.exe /cgit status @D:\Subversion\CommonUtils-dot-net
+
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+
+(1)[2020/01/08 13:03:38.237]
+False
+

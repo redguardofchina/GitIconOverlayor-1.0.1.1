@@ -134,5 +134,8 @@
   <ItemGroup>
     <Resource Include="documents\git-notpushed.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="documents\git-pushed.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
