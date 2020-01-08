@@ -50,7 +50,14 @@ namespace TortoiseGitNotPushedIconOverlayor
         {
             //MessageBox.Show(FileUtil.Exists(_asmPath) + " " + _asmPath);
             //MessageBox.Show(FileUtil.Exists(_dllPath) + " " + _dllPath);
-            var result = CommandUtil.Run("git1");
+
+            var testFloder = @"D:\Subversion\CommonUtils-dot-net";
+            var result = CommandUtil.Run("git status", testFloder);
+            TextBoxLog.Log(result.HasError);
+            TextBoxLog.Log(result);
+
+            testFloder = @"D:\Subversion\TortoiseGitNotPushedIconOverlayor";
+            result = CommandUtil.Run("git status", testFloder);
             TextBoxLog.Log(result.HasError);
             TextBoxLog.Log(result);
         }
