@@ -11,9 +11,14 @@ namespace TortoiseGitNotPushedIconOverlayHandler
     [RegistrationName("  Tortoise0NotPushed")]
     public class TortoiseGitNotPushedIconOverlayHandler : SharpIconOverlayHandler
     {
+        private static bool _hasGit = !CommandUtil.Run("git").HasError;
+
         protected override bool CanShowOverlay(string path, FILE_ATTRIBUTE attributes)
         {
-            if (FileSystem.IsFile(path))
+            if (!_hasGit)
+                return false;
+
+            if (!FileSystem.IsFloder(path))
                 return false;
 
             if (FloderUtil.Exists(path.Combine(".git")))
