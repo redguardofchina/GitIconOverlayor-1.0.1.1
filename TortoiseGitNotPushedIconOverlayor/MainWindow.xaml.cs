@@ -1,5 +1,6 @@
 ﻿using CommonUtils;
 using System.Windows;
+using TortoiseGitNotPushedIconOverlayHandler;
 
 /*
 注册表地址 计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ShellIconOverlayIdentifiers 
@@ -51,15 +52,9 @@ namespace TortoiseGitNotPushedIconOverlayor
             //MessageBox.Show(FileUtil.Exists(_asmPath) + " " + _asmPath);
             //MessageBox.Show(FileUtil.Exists(_dllPath) + " " + _dllPath);
 
-            var testFloder = @"D:\Subversion\CommonUtils-dot-net";
-            var result = CommandUtil.Run("git status", testFloder);
-            TextBoxLog.Log(result.HasError);
-            TextBoxLog.Log(result);
-
-            testFloder = @"D:\Subversion\TortoiseGitNotPushedIconOverlayor";
-            result = CommandUtil.Run("git status", testFloder);
-            TextBoxLog.Log(result.HasError);
-            TextBoxLog.Log(result);
+            TextBoxLog.Log(GitUtil.GetStatus(@"D:\Subversion\CommonUtils-dot-net"));
+            TextBoxLog.Log(GitUtil.GetStatus(@"D:\Subversion\CommonUtils-dot-net - 1"));
+            TextBoxLog.Log(GitUtil.GetStatus(@"D:\Subversion\common-unity"));
         }
     }
 }

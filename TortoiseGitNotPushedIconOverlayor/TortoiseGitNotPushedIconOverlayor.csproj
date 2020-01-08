@@ -97,7 +97,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="documents\log-20200108.log" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -127,15 +126,6 @@
     <None Include="RegAsm.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="documents\git-modified.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="documents\git-notpushed.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="documents\git-pushed.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

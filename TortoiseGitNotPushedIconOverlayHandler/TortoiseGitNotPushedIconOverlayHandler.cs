@@ -13,8 +13,6 @@ namespace TortoiseGitNotPushedIconOverlayHandler
     {
         private static bool _hasGit = !CommandUtil.Run("git").HasError;
 
-        private const string _keywords = "(use \"git push\" to publish your local commits)";
-
         protected override bool CanShowOverlay(string path, FILE_ATTRIBUTE attributes)
         {
             if (!_hasGit)
@@ -26,11 +24,7 @@ namespace TortoiseGitNotPushedIconOverlayHandler
             if (!FloderUtil.Exists(path.Combine(".git")))
                 return false;
 
-            var result = CommandUtil.Run("git status", path);
-            if (result.HasError)
-                return false;
-
-            return result.Result.Contains(_keywords);
+            return GitUtil.GetStatus(path) == GitUtil.GitStatus.Committed;
         }
 
         private static Icon _notPushedIcon = new Icon(ResourceUtil.ReadStream("NotPushed.ico"));

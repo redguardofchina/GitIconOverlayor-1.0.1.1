@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GitUtil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TortoiseGitNotPushedIconOverlayHandler.cs" />
   </ItemGroup>
@@ -56,6 +57,21 @@
     <PackageReference Include="SharpShell">
       <Version>2.7.2</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="documents\git-toPush.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="documents\git-toCommit.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="documents\git-pushed.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="documents\log-20200108.log" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="documents\git-toAdd.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
