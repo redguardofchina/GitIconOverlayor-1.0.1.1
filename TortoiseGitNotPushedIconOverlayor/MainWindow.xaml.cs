@@ -24,8 +24,9 @@ namespace TortoiseGitNotPushedIconOverlayor
         //private static string _asmPath = PathUtil.GetFull("RegAsm.exe");
         private static string _asmPath = "RegAsm.exe";
 
-        //private static string _dllPath = PathUtil.GetFull("TortoiseGitNotPushedIconOverlayHandler.dll");
-        private static string _dllPath = "TortoiseGitNotPushedIconOverlayHandler.dll";
+        private static string _dll = ReflectionUtil.GetNamespace<TortoiseGitNotPushedIconOverlayHandler.TortoiseGitNotPushedIconOverlayHandler>() + ".dll";
+        //private static string _dllPath = PathUtil.GetFull(_dll);
+        private static string _dllPath = _dll;
 
         //private static string _installCommand = string.Format("{0} {1} /codebase", _asmPath, _dllPath); //FullPath
         //private static string _uninstallCommand = string.Format("{0} {1} /u", _asmPath, _dllPath); //FullPath
