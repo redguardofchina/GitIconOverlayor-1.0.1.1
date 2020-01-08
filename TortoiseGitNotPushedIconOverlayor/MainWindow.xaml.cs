@@ -35,6 +35,7 @@ namespace TortoiseGitNotPushedIconOverlayor
             //MessageBox.Show(FileUtil.Exists(_asmPath) + " " + _asmPath);
             //TextBoxLog.Log(CommandUtil.Run(_installCommand));
             TextBoxLog.Log(ProcessUtil.Run(_asmPath, _dllPath + " /codebase"));
+            MessageBox.Show("安装完成，重启后生效，请保留此文件夹");
         }
 
         private void ButtonUninstall_Click(object sender, RoutedEventArgs e)
@@ -42,6 +43,7 @@ namespace TortoiseGitNotPushedIconOverlayor
             //MessageBox.Show(FileUtil.Exists(_dllPath) + " " + _dllPath);
             //TextBoxLog.Log(CommandUtil.Run(_uninstallCommand));
             TextBoxLog.Log(ProcessUtil.Run(_asmPath, _dllPath + " /u"));
+            MessageBox.Show("卸载完成，重启后生效，重启后可手动删除此文件夹");
         }
     }
 }
