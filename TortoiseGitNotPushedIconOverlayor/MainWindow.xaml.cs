@@ -3,7 +3,7 @@ using System.Windows;
 using TortoiseGitNotPushedIconOverlayHandler;
 
 /*
-注册表地址 计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ShellIconOverlayIdentifiers 
+注册表地址 计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ShellIconOverlayIdentifiers
 */
 
 namespace TortoiseGitNotPushedIconOverlayor

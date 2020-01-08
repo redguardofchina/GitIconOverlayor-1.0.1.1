@@ -15,6 +15,8 @@ namespace TortoiseGitNotPushedIconOverlayHandler
 
         protected override bool CanShowOverlay(string path, FILE_ATTRIBUTE attributes)
         {
+            //LogUtil.Log("CanShowOverlay");
+
             if (!_hasGit)
                 return false;
 
@@ -31,15 +33,57 @@ namespace TortoiseGitNotPushedIconOverlayHandler
 
         protected override Icon GetOverlayIcon()
         {
+            //LogUtil.Log("GetOverlayIcon");
+
             return _notPushedIcon;
         }
+
+        /*
+         * 这个是TortoiseShell.IconOverlay.cpp源码，由此判断NotPushedIcon应该配置在6-100之间
+        STDMETHODIMP CShellExt::GetPriority(int *pPriority)
+        {
+           if (!pPriority)
+               return E_POINTER;
+
+           switch (m_State)
+           {
+               case FileStateConflict:
+                   *pPriority = 0;
+                   break;
+               case FileStateModified:
+                   *pPriority = 1;
+                   break;
+               case FileStateDeleted:
+                   *pPriority = 2;
+                   break;
+               case FileStateReadOnly:
+                   *pPriority = 3;
+                   break;
+               case FileStateLockedOverlay:
+                   *pPriority = 4;
+                   break;
+               case FileStateAddedOverlay:
+                   *pPriority = 5;
+                   break;
+               case FileStateVersioned:
+                   *pPriority = 6;
+                   break;
+               default:
+                   *pPriority = 100;
+                   return S_FALSE;
+           }
+           return S_OK;
+        }
+        */
 
         /// <summary>
         /// 优先级 0-100 0最高
         /// </summary>
         protected override int GetPriority()
         {
-            return 0;
+            //LogUtil.Log("GetPriority");
+
+            return 10;
         }
     }
 }
