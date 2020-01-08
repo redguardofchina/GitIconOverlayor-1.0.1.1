@@ -13,9 +13,6 @@ namespace TortoiseGitNotPushedIconOverlayHandler
     {
         protected override bool CanShowOverlay(string path, FILE_ATTRIBUTE attributes)
         {
-            if (true)
-                LogUtil.Log(path);
-
             if (FileSystem.IsFile(path))
                 return false;
 
@@ -25,11 +22,11 @@ namespace TortoiseGitNotPushedIconOverlayHandler
             return false;
         }
 
-        private static Icon _notPushIcon = new Icon(ResourceUtil.ReadStream("NotPushed.ico"));
+        private static Icon _notPushedIcon = new Icon(ResourceUtil.ReadStream("NotPushed.ico"));
 
         protected override Icon GetOverlayIcon()
         {
-            return _notPushIcon;
+            return _notPushedIcon;
         }
 
         /// <summary>
