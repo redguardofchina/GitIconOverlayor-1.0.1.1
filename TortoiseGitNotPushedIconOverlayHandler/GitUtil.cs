@@ -1,6 +1,8 @@
 ﻿using CommonUtils;
+using LibGit2Sharp;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,7 +27,15 @@ namespace TortoiseGitNotPushedIconOverlayHandler
 
         public static GitStatus GetStatus(string floder)
         {
-            var result = CommandUtil.Run("git status", floder);
+            //hack 这个写法会影原有git的图标获取
+
+            //var result = CommandUtil.Run("git status", floder);
+
+            var startInfo = new ProcessStartInfo("git");
+            startInfo.Arguments = "status";
+            startInfo.WorkingDirectory = floder;
+
+            var result = ProcessUtil.Start(startInfo);
 
             if (result.HasError)
                 return GitStatus.Error;
@@ -38,5 +48,11 @@ namespace TortoiseGitNotPushedIconOverlayHandler
 
             return GitStatus.Pushed;
         }
+
+        //todo dowith LibGit2Sharp
+        //public static GitStatus GetGitStatus1(string floder)
+        //{
+        //    var info = new LibGit2Sharp.RepositoryInformation(floder);
+        //}
     }
 }

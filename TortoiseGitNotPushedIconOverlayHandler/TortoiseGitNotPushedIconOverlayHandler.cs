@@ -26,6 +26,10 @@ namespace TortoiseGitNotPushedIconOverlayHandler
             if (!FloderUtil.Exists(path.Combine(".git")))
                 return false;
 
+            CommandUtil.Run("ipconfig/all");
+            //GitUtil.GetStatus(path);
+            return false;
+
             return GitUtil.GetStatus(path) == GitUtil.GitStatus.Committed;
         }
 
@@ -76,14 +80,17 @@ namespace TortoiseGitNotPushedIconOverlayHandler
         }
         */
 
+        //上面的源码好像是假的 这个优先级 是老子用二分法测出来的 大于normal小于modify
+        public const int Priority = 99;
+
         /// <summary>
-        /// 优先级 0-100 0最高
+        /// 优先级 0-100 0最高 100最低
         /// </summary>
         protected override int GetPriority()
         {
             //LogUtil.Log("GetPriority");
 
-            return 10;
+            return Priority;
         }
     }
 }

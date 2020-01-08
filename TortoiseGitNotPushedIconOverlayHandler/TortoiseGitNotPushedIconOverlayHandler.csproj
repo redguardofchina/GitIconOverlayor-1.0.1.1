@@ -54,6 +54,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="LibGit2Sharp">
+      <Version>0.26.2</Version>
+    </PackageReference>
     <PackageReference Include="SharpShell">
       <Version>2.7.2</Version>
     </PackageReference>

@@ -20,6 +20,7 @@ namespace TortoiseGitNotPushedIconOverlayor
             ButtonInstall.Click += ButtonInstall_Click;
             ButtonUninstall.Click += ButtonUninstall_Click;
             ButtonTest.Click += ButtonTest_Click;
+            TextBoxLog.Log("优先级：" + TortoiseGitNotPushedIconOverlayHandler.TortoiseGitNotPushedIconOverlayHandler.Priority);
         }
 
         //private const string _asmPath = @"C:\Windows\Microsoft.NET\Framework64\v4.0.30319\RegAsm.exe";
@@ -52,9 +53,7 @@ namespace TortoiseGitNotPushedIconOverlayor
             //MessageBox.Show(FileUtil.Exists(_asmPath) + " " + _asmPath);
             //MessageBox.Show(FileUtil.Exists(_dllPath) + " " + _dllPath);
 
-            TextBoxLog.Log(GitUtil.GetStatus(@"D:\Subversion\CommonUtils-dot-net"));
-            TextBoxLog.Log(GitUtil.GetStatus(@"D:\Subversion\CommonUtils-dot-net - 1"));
-            TextBoxLog.Log(GitUtil.GetStatus(@"D:\Subversion\common-unity"));
+            TextBoxLog.Log(GitUtil.GetStatus(@"D:\Subversion\TortoiseGitNotPushedIconOverlayor"));
         }
     }
 }
