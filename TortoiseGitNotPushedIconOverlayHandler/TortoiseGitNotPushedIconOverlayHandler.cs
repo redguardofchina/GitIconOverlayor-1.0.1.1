@@ -13,7 +13,8 @@ namespace TortoiseGitNotPushedIconOverlayHandler
     {
         protected override bool CanShowOverlay(string path, FILE_ATTRIBUTE attributes)
         {
-            LogUtil.Log(path);
+            if (true)
+                LogUtil.Log(path);
 
             if (FileSystem.IsFile(path))
                 return false;
