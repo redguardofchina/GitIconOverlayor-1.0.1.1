@@ -18,6 +18,7 @@ namespace TortoiseGitNotPushedIconOverlayor
 
             ButtonInstall.Click += ButtonInstall_Click;
             ButtonUninstall.Click += ButtonUninstall_Click;
+            ButtonTest.Click += ButtonTest_Click;
         }
 
         //private const string _asmPath = @"C:\Windows\Microsoft.NET\Framework64\v4.0.30319\RegAsm.exe";
@@ -33,7 +34,6 @@ namespace TortoiseGitNotPushedIconOverlayor
 
         private void ButtonInstall_Click(object sender, RoutedEventArgs e)
         {
-            //MessageBox.Show(FileUtil.Exists(_asmPath) + " " + _asmPath);
             //TextBoxLog.Log(CommandUtil.Run(_installCommand));
             TextBoxLog.Log(ProcessUtil.Run(_asmPath, _dllPath + " /codebase"));
             MessageBox.Show("安装完成，重启后生效，请保留此文件夹");
@@ -41,10 +41,18 @@ namespace TortoiseGitNotPushedIconOverlayor
 
         private void ButtonUninstall_Click(object sender, RoutedEventArgs e)
         {
-            //MessageBox.Show(FileUtil.Exists(_dllPath) + " " + _dllPath);
             //TextBoxLog.Log(CommandUtil.Run(_uninstallCommand));
             TextBoxLog.Log(ProcessUtil.Run(_asmPath, _dllPath + " /u"));
             MessageBox.Show("卸载完成，重启后生效，重启后可手动删除此文件夹");
+        }
+
+        private void ButtonTest_Click(object sender, RoutedEventArgs e)
+        {
+            //MessageBox.Show(FileUtil.Exists(_asmPath) + " " + _asmPath);
+            //MessageBox.Show(FileUtil.Exists(_dllPath) + " " + _dllPath);
+            var result = CommandUtil.Run("git1");
+            TextBoxLog.Log(result.HasError);
+            TextBoxLog.Log(result);
         }
     }
 }
