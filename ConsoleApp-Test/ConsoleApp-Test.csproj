@@ -53,9 +53,9 @@
       <Project>{173BA26B-AF8C-4949-A7CE-1E832296ADFE}</Project>
       <Name>CommonUtils</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GitIconOverlayHandler\GitIconOverlayHandler.csproj">
+    <ProjectReference Include="..\GitIconOverlayHandler\GitIconOverlayHandlers.csproj">
       <Project>{564C8B20-72D1-4548-B37F-8341C060B464}</Project>
-      <Name>GitIconOverlayHandler</Name>
+      <Name>GitIconOverlayHandlers</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

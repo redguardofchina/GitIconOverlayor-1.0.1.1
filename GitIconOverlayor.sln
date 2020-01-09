@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonUtils.Test", "..\Comm
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp-Test", "ConsoleApp-Test\ConsoleApp-Test.csproj", "{FAE0C0C5-F1A8-4C09-AE1A-28ED5BAE6C47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitIconOverlayHandler", "GitIconOverlayHandler\GitIconOverlayHandler.csproj", "{564C8B20-72D1-4548-B37F-8341C060B464}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitIconOverlayHandlers", "GitIconOverlayHandler\GitIconOverlayHandlers.csproj", "{564C8B20-72D1-4548-B37F-8341C060B464}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitIconOverlayor", "GitIconOverlayor\GitIconOverlayor.csproj", "{844C3B26-92E9-4D81-BCC2-275FB017686C}"
 EndProject
