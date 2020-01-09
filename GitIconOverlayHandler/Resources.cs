@@ -1,7 +1,7 @@
 ﻿using CommonUtils;
 using System.Drawing;
 
-namespace GitIconOverlayHandler
+namespace GitIconOverlayHandlers
 {
     public static class Resources
     {

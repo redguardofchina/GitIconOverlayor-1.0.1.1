@@ -1,4 +1,4 @@
-﻿namespace GitIconOverlayHandler
+﻿namespace GitIconOverlayHandlers
 {
     public enum GitStatus
     {

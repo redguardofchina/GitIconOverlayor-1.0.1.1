@@ -1,5 +1,5 @@
 ﻿using CommonUtils;
-using GitIconOverlayHandler;
+using GitIconOverlayHandlers;
 using System.Windows;
 
 /*

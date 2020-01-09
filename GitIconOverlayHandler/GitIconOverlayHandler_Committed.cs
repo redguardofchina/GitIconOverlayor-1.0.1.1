@@ -4,7 +4,7 @@ using SharpShell.SharpIconOverlayHandler;
 using System.Drawing;
 using System.Runtime.InteropServices;
 
-namespace GitIconOverlayHandler
+namespace GitIconOverlayHandlers
 {
     [ComVisible(true)]
     [RegistrationName("  GitCommitted")]

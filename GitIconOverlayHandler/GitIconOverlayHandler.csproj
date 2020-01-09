@@ -7,8 +7,8 @@
     <ProjectGuid>{564C8B20-72D1-4548-B37F-8341C060B464}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GitIconOverlayHandler</RootNamespace>
-    <AssemblyName>GitIconOverlayHandler</AssemblyName>
+    <RootNamespace>GitIconOverlayHandlers</RootNamespace>
+    <AssemblyName>GitIconOverlayHandlers</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -34,7 +34,7 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>GitIconOverlayHandler.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>GitIconOverlayHandlers.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -73,7 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="documents\git-committed.txt" />
-    <None Include="GitIconOverlayHandler.snk" />
+    <None Include="GitIconOverlayHandlers.snk" />
   </ItemGroup>
   <ItemGroup>
     <None Include="documents\git-modified.txt" />

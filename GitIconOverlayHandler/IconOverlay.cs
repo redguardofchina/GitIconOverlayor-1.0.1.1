@@ -1,6 +1,6 @@
 ﻿using CommonUtils;
 
-namespace GitIconOverlayHandler
+namespace GitIconOverlayHandlers
 {
     public static class IconOverlay
     {

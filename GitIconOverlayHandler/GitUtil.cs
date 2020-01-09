@@ -2,7 +2,7 @@
 using LibGit2Sharp;
 using System.Diagnostics;
 
-namespace GitIconOverlayHandler
+namespace GitIconOverlayHandlers
 {
     public static class GitUtil
     {
