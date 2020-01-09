@@ -52,7 +52,8 @@ namespace TortoiseGitNotPushedIconOverlayor
             //MessageBox.Show(FileUtil.Exists(_asmPath) + " " + _asmPath);
             //MessageBox.Show(FileUtil.Exists(_dllPath) + " " + _dllPath);
 
-            TextBoxLog.Log(GitUtil.GetStatus(@"D:\Subversion\TortoiseGitNotPushedIconOverlayor"));
+            TextBoxLog.Log(GitUtil.GetStatus1(@"D:\Subversion\CommonUtils-dot-net"));
+            TextBoxLog.Log(GitUtil.GetStatus1(@"D:\Subversion\CommonUtils-dot-net-committed"));
         }
     }
 }

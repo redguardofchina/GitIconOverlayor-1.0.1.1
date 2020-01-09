@@ -52,10 +52,12 @@ namespace TortoiseGitNotPushedIconOverlayHandler
         }
 
         //todo dowith LibGit2Sharp
-        public static GitStatus GetGitStatus1(string floder)
+        public static GitStatus GetStatus1(string floder)
         {
             var repository = new Repository(floder);
-            throw new NotImplementedException();
+            var info = repository.RetrieveStatus(new StatusOptions());
+            
+            return GitStatus.Committed;
         }
     }
 }
