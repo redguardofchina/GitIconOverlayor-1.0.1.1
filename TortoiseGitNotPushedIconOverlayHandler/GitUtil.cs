@@ -1,6 +1,5 @@
 ﻿using CommonUtils;
 using LibGit2Sharp;
-using System;
 using System.Diagnostics;
 
 namespace TortoiseGitNotPushedIconOverlayHandler
