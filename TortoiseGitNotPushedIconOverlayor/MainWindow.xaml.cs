@@ -1,12 +1,12 @@
 ﻿using CommonUtils;
-using System.Windows;
 using GitIconOverlayHandler;
+using System.Windows;
 
 /*
 注册表地址 计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ShellIconOverlayIdentifiers
 */
 
-namespace TortoiseGitNotPushedIconOverlayor
+namespace GitIconOverlayor
 {
     /// <summary>
     /// MainWindow.xaml 的交互逻辑

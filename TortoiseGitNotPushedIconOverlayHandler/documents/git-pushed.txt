@@ -1,5 +1,5 @@
 ﻿(4)[2020/01/08 13:03:38.343]
-cmd.exe /cgit status @D:\Subversion\TortoiseGitNotPushedIconOverlayor
+cmd.exe /cgit status @D:\Subversion\GitIconOverlayor
 
 On branch master
 Your branch is up to date with 'origin/master'.

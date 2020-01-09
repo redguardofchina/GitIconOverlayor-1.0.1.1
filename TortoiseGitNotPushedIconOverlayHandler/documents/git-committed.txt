@@ -1,5 +1,5 @@
 ﻿(4)[2020/01/08 13:01:20.323]
-cmd.exe /cgit status @D:\Subversion\TortoiseGitNotPushedIconOverlayor
+cmd.exe /cgit status @D:\Subversion\GitIconOverlayor
 
 On branch master
 Your branch is ahead of 'origin/master' by 3 commits.
