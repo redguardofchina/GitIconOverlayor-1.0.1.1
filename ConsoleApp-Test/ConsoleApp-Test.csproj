@@ -53,8 +53,8 @@
       <Project>{173BA26B-AF8C-4949-A7CE-1E832296ADFE}</Project>
       <Name>CommonUtils</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GitIconOverlayHandler\GitIconOverlayHandlers.csproj">
-      <Project>{564C8B20-72D1-4548-B37F-8341C060B464}</Project>
+    <ProjectReference Include="..\GitIconOverlayHandlers\GitIconOverlayHandlers.csproj">
+      <Project>{564c8b20-72d1-4548-b37f-8341c060b464}</Project>
       <Name>GitIconOverlayHandlers</Name>
     </ProjectReference>
   </ItemGroup>
