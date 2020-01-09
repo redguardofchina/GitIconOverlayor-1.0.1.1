@@ -28,8 +28,8 @@ namespace TortoiseGitNotPushedIconOverlayor
         {
             TextBoxLog.Log("优先级：" + TortoiseGitNotPushedIconOverlayHandler.TortoiseGitNotPushedIconOverlayHandler.Priority);
 
-            var gitPath = PathUtil.GetFull("Git/cmd/git.exe");
-            RegeditUtil.SetConfig(GitUtil.KeyOfGitPathInRegeditConfig, gitPath);
+            //var gitPath = PathUtil.GetFull("Git/cmd/git.exe");
+            //RegeditUtil.SetConfig(GitUtil.KeyOfGitPathInRegeditConfig, gitPath);
         }
 
         private static string _asmPath = "RegAsm.exe";

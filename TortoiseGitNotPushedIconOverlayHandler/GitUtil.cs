@@ -20,19 +20,20 @@ namespace TortoiseGitNotPushedIconOverlayHandler
 
         private const string _notPushedKeywords = "(use \"git push\" to publish your local commits)";
 
-        public const string KeyOfGitPathInRegeditConfig = "GitPathForPlugin";
+        //public const string KeyOfGitPathInRegeditConfig = "GitPathForPlugin";
 
-        private static string _gitPath = RegeditUtil.GetConfig(KeyOfGitPathInRegeditConfig);
+        //private static string _gitPath = RegeditUtil.GetConfig(KeyOfGitPathInRegeditConfig);
 
         public static GitStatus GetStatus(string floder)
         {
             //下面两种写法会影原有git的图标获取
             //var result = CommandUtil.Run("git status", floder);
-            //var startInfo = new ProcessStartInfo("git");
+            var startInfo = new ProcessStartInfo("git");
 
             //额外复制一份
             //var startInfo = new ProcessStartInfo(@"D:\Subversion\TortoiseGitNotPushedIconOverlayor\Git\cmd\git.exe");
-            var startInfo = new ProcessStartInfo(_gitPath);
+            //var startInfo = new ProcessStartInfo(_gitPath);
+
             startInfo.Arguments = "status";
             startInfo.WorkingDirectory = floder;
 
