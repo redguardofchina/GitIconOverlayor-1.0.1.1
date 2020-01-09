@@ -9,7 +9,7 @@ namespace TortoiseGitNotPushedIconOverlayHandler
 {
     [ComVisible(true)]
     [RegistrationName("  Tortoise0NotPushed")]
-    public class TortoiseGitNotPushedIconOverlayHandler : SharpIconOverlayHandler
+    public class TortoiseGitPushedIconOverlayHandler : SharpIconOverlayHandler
     {
         private static bool _hasGit = !CommandUtil.Run("git").HasError;
 
@@ -28,7 +28,7 @@ namespace TortoiseGitNotPushedIconOverlayHandler
 
             //ThreadUtil.Sleep(5);//让出IO
 
-            var result = GitUtil.GetStatus(path) == GitUtil.GitStatus.Committed;
+            var result = GitUtil.GetStatus(path) == GitUtil.GitStatus.Pushed;
 
             if (!result)
                 ThreadUtil.Sleep(1);//释放IO
@@ -36,7 +36,7 @@ namespace TortoiseGitNotPushedIconOverlayHandler
             return result;
         }
 
-        private static Icon _notPushedIcon = new Icon(ResourceUtil.ReadStream("resources.NotPushedIcon.ico"));
+        private static Icon _notPushedIcon = new Icon(ResourceUtil.ReadStream("resources.PushedIcon.ico"));
 
         protected override Icon GetOverlayIcon()
         {
