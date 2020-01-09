@@ -1,6 +1,6 @@
 ﻿using CommonUtils;
 using System.Windows;
-using TortoiseGitNotPushedIconOverlayHandler;
+using GitIconOverlayHandler;
 
 /*
 注册表地址 计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ShellIconOverlayIdentifiers
@@ -26,11 +26,11 @@ namespace TortoiseGitNotPushedIconOverlayor
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            TextBoxLog.Log("优先级：" + TortoiseGitNotPushedIconOverlayHandler.TortoiseGitNotPushedIconOverlayHandler.Priority);
+            TextBoxLog.Log("优先级：" + GitUtil.Priority);
         }
 
         private static string _asmPath = "RegAsm.exe";
-        private static string _dllPath = ReflectionUtil.GetNamespace<TortoiseGitNotPushedIconOverlayHandler.TortoiseGitNotPushedIconOverlayHandler>() + ".dll";
+        private static string _dllPath = ReflectionUtil.GetNamespace<GitStatus>() + ".dll";
 
         private void ButtonInstall_Click(object sender, RoutedEventArgs e)
         {
