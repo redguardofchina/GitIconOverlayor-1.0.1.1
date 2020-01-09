@@ -7,19 +7,19 @@ using System.Runtime.InteropServices;
 namespace GitIconOverlayHandler
 {
     [ComVisible(true)]
-    [RegistrationName("  GitPushed")]
-    public class GitIconOverlayHandler_Pushed : SharpIconOverlayHandler
+    [RegistrationName("  GitCommitted")]
+    public class GitIconOverlayHandler_Committed : SharpIconOverlayHandler
     {
         protected override bool CanShowOverlay(string path, FILE_ATTRIBUTE attributes)
         {
             //LogUtil.Log("CanShowOverlay");
-            return IconOverlay.CanShow(path, GitStatus.Pushed);
+            return IconOverlay.CanShow(path, GitStatus.Committed);
         }
 
         protected override Icon GetOverlayIcon()
         {
             //LogUtil.Log("GetOverlayIcon");
-            return Resources.PushedIcon;
+            return Resources.CommittedIcon;
         }
 
         protected override int GetPriority()

@@ -48,9 +48,11 @@
   <ItemGroup>
     <Compile Include="GitStatus.cs" />
     <Compile Include="GitUtil.cs" />
+    <Compile Include="IconOverlay.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GitIconOverlayHandler_Pushed.cs" />
-    <Compile Include="GitIconOverlayHandler_NotPushed.cs" />
+    <Compile Include="GitIconOverlayHandler_Committed.cs" />
+    <Compile Include="Resources.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="resources\PushedIcon.ico" />
@@ -87,7 +89,10 @@
     <None Include="documents\git-added.txt" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="resources\NotPushedIcon.ico" />
+    <EmbeddedResource Include="resources\CommittedIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="resources\ModifiedIcon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
