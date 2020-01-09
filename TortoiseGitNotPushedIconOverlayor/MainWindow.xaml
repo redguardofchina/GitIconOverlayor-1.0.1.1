@@ -1,6 +1,6 @@
 ﻿<Window x:Class="TortoiseGitNotPushedIconOverlayor.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:TortoiseGitNotPushedIconOverlayor" mc:Ignorable="d" Title="TortoiseGitNotPushedIconOverlayor" Height="450" Width="600" Icon="favicon.ico" WindowStartupLocation="CenterScreen">
     <Grid Background="#cccccc">
-        <Button Content="test" HorizontalAlignment="Left" Margin="30,20,0,0" VerticalAlignment="Top" Width="75" Name="ButtonTest" IsEnabled="True" />
+        <Button Content="test" HorizontalAlignment="Left" Margin="30,20,0,0" VerticalAlignment="Top" Width="75" Name="ButtonTest" IsEnabled="False" />
         <Button Content="install" HorizontalAlignment="Center" Margin="0,30,200,0" VerticalAlignment="Top" Width="75" Name="ButtonInstall" />
         <Button Content="uninstall" HorizontalAlignment="Center" Margin="200,30,0,0" VerticalAlignment="Top" Width="75" Name="ButtonUninstall" />
         <TextBox HorizontalAlignment="Center" Height="300" Margin="0,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="500" VerticalScrollBarVisibility="Visible" IsReadOnly="True" Name="TextBoxLog" />

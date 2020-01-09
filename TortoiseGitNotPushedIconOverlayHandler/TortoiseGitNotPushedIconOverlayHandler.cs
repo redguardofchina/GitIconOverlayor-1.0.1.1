@@ -26,6 +26,8 @@ namespace TortoiseGitNotPushedIconOverlayHandler
             if (!FloderUtil.Exists(path.Combine(".git")))
                 return false;
 
+            ThreadUtil.Sleep(0.2);//让出IO
+
             return GitUtil.GetStatus(path) == GitUtil.GitStatus.Committed;
         }
 

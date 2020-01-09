@@ -27,9 +27,6 @@ namespace TortoiseGitNotPushedIconOverlayor
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
             TextBoxLog.Log("优先级：" + TortoiseGitNotPushedIconOverlayHandler.TortoiseGitNotPushedIconOverlayHandler.Priority);
-
-            //var gitPath = PathUtil.GetFull("Git/cmd/git.exe");
-            //RegeditUtil.SetConfig(GitUtil.KeyOfGitPathInRegeditConfig, gitPath);
         }
 
         private static string _asmPath = "RegAsm.exe";
@@ -52,8 +49,8 @@ namespace TortoiseGitNotPushedIconOverlayor
             //MessageBox.Show(FileUtil.Exists(_asmPath) + " " + _asmPath);
             //MessageBox.Show(FileUtil.Exists(_dllPath) + " " + _dllPath);
 
-            TextBoxLog.Log(GitUtil.GetStatus1(@"D:\Subversion\CommonUtils-dot-net"));
-            TextBoxLog.Log(GitUtil.GetStatus1(@"D:\Subversion\CommonUtils-dot-net-committed"));
+            TextBoxLog.Log(GitUtil.GetStatus(@"D:\Subversion\CommonUtils-dot-net"));
+            TextBoxLog.Log(GitUtil.GetStatus(@"D:\Subversion\CommonUtils-dot-net-committed"));
         }
     }
 }
