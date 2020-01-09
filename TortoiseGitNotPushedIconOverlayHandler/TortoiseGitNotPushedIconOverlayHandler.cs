@@ -26,9 +26,14 @@ namespace TortoiseGitNotPushedIconOverlayHandler
             if (!FloderUtil.Exists(path.Combine(".git")))
                 return false;
 
-            ThreadUtil.Sleep(0.2);//让出IO
+            //ThreadUtil.Sleep(5);//让出IO
 
-            return GitUtil.GetStatus(path) == GitUtil.GitStatus.Committed;
+            var result = GitUtil.GetStatus(path) == GitUtil.GitStatus.Committed;
+
+            if (!result)
+                ThreadUtil.Sleep(1);//释放IO
+
+            return result;
         }
 
         private static Icon _notPushedIcon = new Icon(ResourceUtil.ReadStream("NotPushed.ico"));
