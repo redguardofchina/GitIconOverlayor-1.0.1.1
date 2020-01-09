@@ -49,8 +49,8 @@
     <Compile Include="GitStatus.cs" />
     <Compile Include="GitUtil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="GitPushedIconOverlayHandler.cs" />
-    <Compile Include="GitNotPushedIconOverlayHandler.cs" />
+    <Compile Include="GitIconOverlayHandler_Pushed.cs" />
+    <Compile Include="GitIconOverlayHandler_NotPushed.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="resources\PushedIcon.ico" />

@@ -9,7 +9,7 @@ namespace GitIconOverlayHandler
 {
     [ComVisible(true)]
     [RegistrationName("  GitNotPushed")]
-    public class GitNotPushedIconOverlayHandler : SharpIconOverlayHandler
+    public class GitIconOverlayHandler_NotPushed : SharpIconOverlayHandler
     {
         private static bool _hasGit = !CommandUtil.Run("git").HasError;
 
