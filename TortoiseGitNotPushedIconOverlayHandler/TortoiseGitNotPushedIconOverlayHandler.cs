@@ -26,8 +26,8 @@ namespace TortoiseGitNotPushedIconOverlayHandler
             if (!FloderUtil.Exists(path.Combine(".git")))
                 return false;
 
-            CommandUtil.Run("ipconfig/all");
-            //GitUtil.GetStatus(path);
+            GitUtil.GetStatus(path);
+
             return false;
 
             return GitUtil.GetStatus(path) == GitUtil.GitStatus.Committed;
@@ -44,6 +44,7 @@ namespace TortoiseGitNotPushedIconOverlayHandler
 
         /*
          * 这个是TortoiseShell.IconOverlay.cpp源码，由此判断NotPushedIcon应该配置在6-100之间
+         * https://github.com/TortoiseGit/TortoiseGit
         STDMETHODIMP CShellExt::GetPriority(int *pPriority)
         {
            if (!pPriority)
@@ -80,7 +81,7 @@ namespace TortoiseGitNotPushedIconOverlayHandler
         }
         */
 
-        //上面的源码好像是假的 这个优先级 是老子用二分法测出来的 大于normal小于modify
+        //上面的源码好像是假的 二分法测Tortoise的优先级都是100
         public const int Priority = 99;
 
         /// <summary>

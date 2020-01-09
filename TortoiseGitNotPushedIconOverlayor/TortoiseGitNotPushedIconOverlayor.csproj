@@ -124,4 +124,7 @@
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>xcopy $(SolutionDir)Git $(TargetDir)Git\ /s /y</PreBuildEvent>
+  </PropertyGroup>
 </Project>

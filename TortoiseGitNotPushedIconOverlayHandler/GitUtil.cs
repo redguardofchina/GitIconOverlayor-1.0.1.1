@@ -1,11 +1,7 @@
 ﻿using CommonUtils;
 using LibGit2Sharp;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TortoiseGitNotPushedIconOverlayHandler
 {
@@ -24,14 +20,19 @@ namespace TortoiseGitNotPushedIconOverlayHandler
 
         private const string _notPushedKeywords = "(use \"git push\" to publish your local commits)";
 
+        private static string _gitPath = PathUtil.GetFull("Git/cmd/git.exe");
 
         public static GitStatus GetStatus(string floder)
         {
-            //hack 这个写法会影原有git的图标获取
-
+            //下面两种写法会影原有git的图标获取
             //var result = CommandUtil.Run("git status", floder);
+            //var startInfo = new ProcessStartInfo("git");
 
-            var startInfo = new ProcessStartInfo("git");
+            //看看服务状态会定位到什么地方
+            LogUtil.Log(_gitPath);
+
+            //var startInfo = new ProcessStartInfo(@"D:\Subversion\TortoiseGitNotPushedIconOverlayor\Git\cmd\git.exe");
+            var startInfo = new ProcessStartInfo(_gitPath);
             startInfo.Arguments = "status";
             startInfo.WorkingDirectory = floder;
 
@@ -50,9 +51,10 @@ namespace TortoiseGitNotPushedIconOverlayHandler
         }
 
         //todo dowith LibGit2Sharp
-        //public static GitStatus GetGitStatus1(string floder)
-        //{
-        //    var info = new LibGit2Sharp.RepositoryInformation(floder);
-        //}
+        public static GitStatus GetGitStatus1(string floder)
+        {
+            var repository = new Repository(floder);
+            throw new NotImplementedException();
+        }
     }
 }
