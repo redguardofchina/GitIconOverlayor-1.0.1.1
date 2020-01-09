@@ -20,30 +20,29 @@ namespace TortoiseGitNotPushedIconOverlayor
             ButtonInstall.Click += ButtonInstall_Click;
             ButtonUninstall.Click += ButtonUninstall_Click;
             ButtonTest.Click += ButtonTest_Click;
-            TextBoxLog.Log("优先级：" + TortoiseGitNotPushedIconOverlayHandler.TortoiseGitNotPushedIconOverlayHandler.Priority);
+
+            Loaded += MainWindow_Loaded;
         }
 
-        //private const string _asmPath = @"C:\Windows\Microsoft.NET\Framework64\v4.0.30319\RegAsm.exe";
-        //private static string _asmPath = PathUtil.GetFull("RegAsm.exe");
+        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            TextBoxLog.Log("优先级：" + TortoiseGitNotPushedIconOverlayHandler.TortoiseGitNotPushedIconOverlayHandler.Priority);
+
+            var gitPath = PathUtil.GetFull("Git/cmd/git.exe");
+            RegeditUtil.SetConfig(GitUtil.KeyOfGitPathInRegeditConfig, gitPath);
+        }
+
         private static string _asmPath = "RegAsm.exe";
-
-        private static string _dll = ReflectionUtil.GetNamespace<TortoiseGitNotPushedIconOverlayHandler.TortoiseGitNotPushedIconOverlayHandler>() + ".dll";
-        //private static string _dllPath = PathUtil.GetFull(_dll);
-        private static string _dllPath = _dll;
-
-        //private static string _installCommand = string.Format("{0} {1} /codebase", _asmPath, _dllPath); //FullPath
-        //private static string _uninstallCommand = string.Format("{0} {1} /u", _asmPath, _dllPath); //FullPath
+        private static string _dllPath = ReflectionUtil.GetNamespace<TortoiseGitNotPushedIconOverlayHandler.TortoiseGitNotPushedIconOverlayHandler>() + ".dll";
 
         private void ButtonInstall_Click(object sender, RoutedEventArgs e)
         {
-            //TextBoxLog.Log(CommandUtil.Run(_installCommand));
             TextBoxLog.Log(ProcessUtil.Run(_asmPath, _dllPath + " /codebase"));
             MessageBox.Show("安装完成，重启后生效，请保留此文件夹");
         }
 
         private void ButtonUninstall_Click(object sender, RoutedEventArgs e)
         {
-            //TextBoxLog.Log(CommandUtil.Run(_uninstallCommand));
             TextBoxLog.Log(ProcessUtil.Run(_asmPath, _dllPath + " /u"));
             MessageBox.Show("卸载完成，重启后生效，重启后可手动删除此文件夹");
         }
