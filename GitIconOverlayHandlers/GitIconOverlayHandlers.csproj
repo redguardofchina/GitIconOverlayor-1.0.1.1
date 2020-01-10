@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GitIconOverlayHandler_Conflict.cs" />
     <Compile Include="GitIconOverlayHandler_Modified.cs" />
     <Compile Include="IconOverlay.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
