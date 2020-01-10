@@ -95,5 +95,12 @@
   <ItemGroup>
     <EmbeddedResource Include="resources\ModifiedIcon.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="resources\CommittedIcon-u.ico" />
+    <EmbeddedResource Include="resources\ConflictIcon-u.ico" />
+    <EmbeddedResource Include="resources\ConflictIcon.ico" />
+    <EmbeddedResource Include="resources\ModifiedIcon-u.ico" />
+    <EmbeddedResource Include="resources\PushedIcon-u.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

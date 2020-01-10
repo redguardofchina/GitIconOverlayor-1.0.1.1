@@ -40,5 +40,12 @@ namespace GitIconOverlayHandlers
 
             return GitStatus.Committed;
         }
+
+        public static bool CheckUpdate(string floder)
+        {
+            var repository = new Repository(floder);
+            var info = repository.RetrieveStatus(new StatusOptions());
+            return true;
+        }
     }
 }
