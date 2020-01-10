@@ -14,7 +14,7 @@ namespace GitIconOverlayHandlers
         protected override bool CanShowOverlay(string path, FILE_ATTRIBUTE attributes)
         {
             //LogUtil.Log("CanShowOverlay");
-            return IconOverlay.CanShow(path, GitStatus.Pushed);
+            return GitUtil.GetStatus(path) == GitStatus.Pushed;
         }
 
         protected override Icon GetOverlayIcon()
