@@ -93,6 +93,24 @@
     <Content Include="icons2\Pushed.ico" />
     <Content Include="icons2\PushedU.ico" />
     <Content Include="icons2\Unknown.ico" />
+    <Content Include="icons3\Committed.ico" />
+    <Content Include="icons3\CommittedU.ico" />
+    <Content Include="icons3\Conflict.ico" />
+    <Content Include="icons3\ConflictU.ico" />
+    <Content Include="icons3\Modified.ico" />
+    <Content Include="icons3\ModifiedU.ico" />
+    <Content Include="icons3\Pushed.ico" />
+    <Content Include="icons3\PushedU.ico" />
+    <Content Include="icons3\Unknown.ico" />
+    <Content Include="icons4\Committed.ico" />
+    <Content Include="icons4\CommittedU.ico" />
+    <Content Include="icons4\Conflict.ico" />
+    <Content Include="icons4\ConflictU.ico" />
+    <Content Include="icons4\Modified.ico" />
+    <Content Include="icons4\ModifiedU.ico" />
+    <Content Include="icons4\Pushed.ico" />
+    <Content Include="icons4\PushedU.ico" />
+    <Content Include="icons4\Unknown.ico" />
     <Content Include="icons\Unknown.ico" />
     <None Include="icons1\Committed.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -130,6 +148,7 @@
     <None Include="icons\ConflictU.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <Content Include="icons\readme.txt" />
     <None Include="icons\Modified.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
