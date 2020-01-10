@@ -69,21 +69,21 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="documents\git-committed.txt" />
+    <None Include="documents\git-4committed.txt" />
     <None Include="GitIconOverlayHandlers.snk" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="documents\git-modified.txt" />
+    <None Include="documents\git-2modified.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="documents\git-pushed.txt" />
+    <None Include="documents\git-5pushed.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="documents\log-methods.log" />
     <None Include="documents\log-paths.log" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="documents\git-added.txt" />
+    <None Include="documents\git-1added.txt" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="resources\CommittedIcon.ico" />
@@ -97,6 +97,9 @@
     <EmbeddedResource Include="resources\ConflictIcon.ico" />
     <EmbeddedResource Include="resources\ModifiedIcon-u.ico" />
     <EmbeddedResource Include="resources\PushedIcon-u.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="documents\git-3conflict.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
