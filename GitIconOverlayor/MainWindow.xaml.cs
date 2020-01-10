@@ -30,7 +30,7 @@ namespace GitIconOverlayor
         }
 
         private static string _asmPath = "RegAsm.exe";
-        private static string _dllPath = ReflectionUtil.GetNamespace<GitStatus>() + ".dll";
+        private static string _dllPath = typeof(IconOverlay).Namespace + ".dll";
 
         private void ButtonInstall_Click(object sender, RoutedEventArgs e)
         {
