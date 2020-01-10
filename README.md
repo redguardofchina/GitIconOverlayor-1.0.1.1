@@ -35,3 +35,7 @@ TortoiseGit如何让【仅提交到本地】与【已推送到服务器】 显�
 
 
 这个项目就是解决这个问题的
+
+第三方库地址：
+
+https://gitee.com/atalent/CommonUtils-dot-net.git
