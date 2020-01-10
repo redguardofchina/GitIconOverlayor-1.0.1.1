@@ -55,11 +55,6 @@
     <Compile Include="Resources.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="icons\PushedIcon.ico">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\CommonUtils-dot-net\CommonUtils\CommonUtils.csproj">
       <Project>{173ba26b-af8c-4949-a7ce-1e832296adfe}</Project>
       <Name>CommonUtils</Name>
@@ -88,33 +83,65 @@
     <None Include="documents\git-1added.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="icons\CommittedIcon.ico">
+    <Content Include="icons1\Unknown.ico" />
+    <Content Include="icons2\Committed.ico" />
+    <Content Include="icons2\CommittedU.ico" />
+    <Content Include="icons2\Conflict.ico" />
+    <Content Include="icons2\ConflictU.ico" />
+    <Content Include="icons2\Modified.ico" />
+    <Content Include="icons2\ModifiedU.ico" />
+    <Content Include="icons2\Pushed.ico" />
+    <Content Include="icons2\PushedU.ico" />
+    <Content Include="icons2\Unknown.ico" />
+    <Content Include="icons\Unknown.ico" />
+    <None Include="icons1\Committed.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="icons\ModifiedIcon.ico">
+    <None Include="icons1\CommittedU.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="icons\CommittedIcon-u.ico">
+    <None Include="icons1\Conflict.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="icons\ConflictIcon-u.ico">
+    <None Include="icons1\ConflictU.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="icons\ConflictIcon.ico">
+    <None Include="icons1\Modified.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="icons\ModifiedIcon-u.ico">
+    <None Include="icons1\ModifiedU.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="icons\PushedIcon-u.ico">
+    <None Include="icons1\Pushed.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-  <ItemGroup>
+    <None Include="icons1\PushedU.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="icons\Committed.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="icons\CommittedU.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="icons\Conflict.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="icons\ConflictU.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="icons\Modified.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="icons\ModifiedU.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="icons\Pushed.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="icons\PushedU.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="documents\git-0new.txt" />
     <Content Include="documents\git-3conflict.txt" />
     <Content Include="documents\priority.txt" />

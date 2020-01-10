@@ -38,7 +38,7 @@ namespace GitIconOverlayHandlers
                 case GitStatus.Pushed:
                     return new Icon(_iconFloder.Combine("Pushed.ico"));
                 default:
-                    return new Icon(_iconFloder.Combine("Unkonwn.ico"));
+                    return new Icon(_iconFloder.Combine("Unknown.ico"));
             }
         }
 
