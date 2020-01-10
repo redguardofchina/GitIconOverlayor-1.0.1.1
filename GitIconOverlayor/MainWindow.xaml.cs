@@ -26,11 +26,11 @@ namespace GitIconOverlayor
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            TextBoxLog.Log("优先级：" + IconOverlay.Priority);
+            TextBoxLog.Log("优先级：" + GitIconOverlayHandler.Priority);
         }
 
         private static string _asmPath = "RegAsm.exe";
-        private static string _dllPath = typeof(IconOverlay).Namespace + ".dll";
+        private static string _dllPath = typeof(GitIconOverlayHandler).Namespace + ".dll";
 
         private void ButtonInstall_Click(object sender, RoutedEventArgs e)
         {
