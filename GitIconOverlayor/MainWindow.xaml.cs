@@ -17,16 +17,16 @@ namespace GitIconOverlayor
         {
             InitializeComponent();
 
+            Loaded += MainWindow_Loaded;
+
             ButtonInstall.Click += ButtonInstall_Click;
             ButtonUninstall.Click += ButtonUninstall_Click;
-            ButtonTest.Click += ButtonTest_Click;
-
-            Loaded += MainWindow_Loaded;
         }
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
             TextBoxLog.Log("优先级：" + GitIconOverlayHandler.Priority);
+            RegeditUtil.SetToConfig(GitIconOverlayHandler.FiledIconsFloder, PathUtil.GetFull("icons"));
         }
 
         private static string _asmPath = "RegAsm.exe";
@@ -42,15 +42,6 @@ namespace GitIconOverlayor
         {
             TextBoxLog.Log(ProcessUtil.Run(_asmPath, _dllPath + " /u"));
             MessageBox.Show("卸载完成，重启后生效，重启后可手动删除此文件夹");
-        }
-
-        private void ButtonTest_Click(object sender, RoutedEventArgs e)
-        {
-            //MessageBox.Show(FileUtil.Exists(_asmPath) + " " + _asmPath);
-            //MessageBox.Show(FileUtil.Exists(_dllPath) + " " + _dllPath);
-
-            TextBoxLog.Log(GitUtil.GetStatus(@"D:\Subversion\CommonUtils-dot-net"));
-            TextBoxLog.Log(GitUtil.GetStatus(@"D:\Subversion\CommonUtils-dot-net-committed"));
         }
     }
 }
