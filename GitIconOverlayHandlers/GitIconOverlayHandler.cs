@@ -1,6 +1,7 @@
 ﻿using CommonUtils;
 using SharpShell.Interop;
 using SharpShell.SharpIconOverlayHandler;
+using System;
 using System.Drawing;
 
 namespace GitIconOverlayHandlers
@@ -88,7 +89,16 @@ namespace GitIconOverlayHandlers
         protected override bool CanShowOverlay(string path, FILE_ATTRIBUTE attributes)
         {
             //LogUtil.Log(Status + " CanShowOverlay: " + path);
-            return Status == GitUtil.GetStatus(path);
+
+            try
+            {
+                return Status == GitUtil.GetStatus(path);
+            }
+            catch (Exception ex)
+            {
+                LogUtil.Log(ex);
+                return false;
+            }
         }
     }
 }
