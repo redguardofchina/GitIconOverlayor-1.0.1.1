@@ -92,6 +92,7 @@ namespace GitIconOverlayHandlers
 
             try
             {
+                //todo 把优先级最高的结果缓存 低优先级直接读缓存
                 return Status == GitUtil.GetStatus(path);
             }
             catch (Exception ex)
