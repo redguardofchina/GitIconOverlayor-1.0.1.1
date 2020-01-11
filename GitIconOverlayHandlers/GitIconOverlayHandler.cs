@@ -16,7 +16,7 @@ namespace GitIconOverlayHandlers
         static GitIconOverlayHandler()
         {
             PathConfig.SetRootFloder(_rootFloder);
-            LogUtil.Log("ProcessName: " + ApplicationUtil.ProcessName);
+            LogUtil.Log("Process: " + ApplicationUtil.ProcessPath);
         }
 
         /// <summary>
