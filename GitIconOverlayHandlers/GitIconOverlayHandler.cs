@@ -9,6 +9,16 @@ namespace GitIconOverlayHandlers
     {
         public virtual GitStatus Status { get; set; }
 
+        public const string RootFloderFiled = "GitIconOverlayorFloder";
+
+        private static string _rootFloder = RegeditUtil.GetFromConfig(RootFloderFiled);
+
+        static GitIconOverlayHandler()
+        {
+            PathConfig.SetRootFloder(_rootFloder);
+            LogUtil.Log("ProcessName: " + ApplicationUtil.ProcessName);
+        }
+
         /// <summary>
         /// 优先级 0-100 0最高 100最低
         /// </summary>
@@ -48,14 +58,12 @@ namespace GitIconOverlayHandlers
                 case GitStatus.Conflict:
                     return Priority + 9;
                 default://按照逻辑Status不会出现这种情况
-                    //LogUtil.Log("Has Bug !!!");
+                    LogUtil.Log("Has Bug !!!");
                     return 100;
             }
         }
 
-        public const string FiledIconsFloder = "GitIconOverlayorIconsFloder";
-
-        private static string _iconFloder = RegeditUtil.GetFromConfig(FiledIconsFloder);
+        private static string _iconsFloder = _rootFloder.Combine("icons");
 
         protected override Icon GetOverlayIcon()
         {
@@ -64,16 +72,16 @@ namespace GitIconOverlayHandlers
             switch (Status)
             {
                 case GitStatus.Conflict:
-                    return new Icon(_iconFloder.Combine("Conflict.ico"));
+                    return new Icon(_iconsFloder.Combine("Conflict.ico"));
                 case GitStatus.Modified:
-                    return new Icon(_iconFloder.Combine("Modified.ico"));
+                    return new Icon(_iconsFloder.Combine("Modified.ico"));
                 case GitStatus.Committed:
-                    return new Icon(_iconFloder.Combine("Committed.ico"));
+                    return new Icon(_iconsFloder.Combine("Committed.ico"));
                 case GitStatus.Pushed:
-                    return new Icon(_iconFloder.Combine("Pushed.ico"));
+                    return new Icon(_iconsFloder.Combine("Pushed.ico"));
                 default://按照逻辑Status不会出现这种情况
-                    //LogUtil.Log("Has Bug !!!");
-                    return new Icon(_iconFloder.Combine("Unknown.ico"));
+                    LogUtil.Log("Has Bug !!!");
+                    return new Icon(_iconsFloder.Combine("Unknown.ico"));
             }
         }
 
