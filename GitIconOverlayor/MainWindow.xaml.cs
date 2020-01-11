@@ -26,7 +26,6 @@ namespace GitIconOverlayor
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
             TextBoxLog.Log("优先级：" + GitIconOverlayHandler.Priority + "~" + (GitIconOverlayHandler.Priority + 10));
-            RegeditUtil.SetToConfig(GitIconOverlayHandler.FiledIconsFloder, PathUtil.GetFull("icons"));
         }
 
         private static string _asmPath = "RegAsm.exe";
@@ -34,6 +33,9 @@ namespace GitIconOverlayor
 
         private void ButtonInstall_Click(object sender, RoutedEventArgs e)
         {
+            var iconsPath = PathUtil.GetFull("icons");
+            RegeditUtil.SetToConfig(GitIconOverlayHandler.FiledIconsFloder, iconsPath);
+            TextBoxLog.Log("SetToRegeditConfig: GitIconOverlayorIconsFloder=" + iconsPath);
             TextBoxLog.Log(ProcessUtil.Run(_asmPath, _dllPath + " /codebase"));
             MessageBox.Show("安装完成，重启后生效，请保留此文件夹");
         }
