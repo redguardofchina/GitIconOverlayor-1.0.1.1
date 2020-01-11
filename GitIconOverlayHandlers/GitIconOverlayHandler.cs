@@ -19,7 +19,7 @@ namespace GitIconOverlayHandlers
         /// </summary>
         protected override int GetPriority()
         {
-            //LogUtil.Log("GetPriority");
+            //LogUtil.Log(Status + " GetPriority");
 
             //根据GetStatus方法推导
             //switch (Status)
@@ -48,6 +48,7 @@ namespace GitIconOverlayHandlers
                 case GitStatus.Conflict:
                     return Priority + 9;
                 default://按照逻辑Status不会出现这种情况
+                    //LogUtil.Log("Has Bug !!!");
                     return 100;
             }
         }
@@ -58,7 +59,8 @@ namespace GitIconOverlayHandlers
 
         protected override Icon GetOverlayIcon()
         {
-            //LogUtil.Log("GetOverlayIcon");
+            //LogUtil.Log(Status + " GetOverlayIcon");
+
             switch (Status)
             {
                 case GitStatus.Conflict:
@@ -70,13 +72,14 @@ namespace GitIconOverlayHandlers
                 case GitStatus.Pushed:
                     return new Icon(_iconFloder.Combine("Pushed.ico"));
                 default://按照逻辑Status不会出现这种情况
+                    //LogUtil.Log("Has Bug !!!");
                     return new Icon(_iconFloder.Combine("Unknown.ico"));
             }
         }
 
         protected override bool CanShowOverlay(string path, FILE_ATTRIBUTE attributes)
         {
-            //LogUtil.Log("CanShowOverlay");
+            //LogUtil.Log(Status + " CanShowOverlay: " + path);
             return Status == GitUtil.GetStatus(path);
         }
     }
