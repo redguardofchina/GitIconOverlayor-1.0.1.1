@@ -25,7 +25,7 @@ namespace GitIconOverlayor
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            TextBoxLog.Log("优先级：" + GitIconOverlayHandler.Priority);
+            TextBoxLog.Log("优先级：" + GitIconOverlayHandler.Priority + "~" + (GitIconOverlayHandler.Priority + 10));
             RegeditUtil.SetToConfig(GitIconOverlayHandler.FiledIconsFloder, PathUtil.GetFull("icons"));
         }
 

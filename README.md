@@ -39,3 +39,11 @@ TortoiseGit如何让【仅提交到本地】与【已推送到服务器】 显�
 第三方库地址：
 
 https://gitee.com/atalent/CommonUtils-dot-net.git
+
+
+
+如果你是在github上看到的此项目，那你看到的可能是过时的副本
+
+因为网络原因，我主更gitee.com
+
+https://gitee.com/atalent/GitIconOverlayor
