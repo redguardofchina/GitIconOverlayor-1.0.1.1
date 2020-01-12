@@ -15,6 +15,7 @@ namespace GitIconOverlayor
     {
         public MainWindow()
         {
+            //todo 查看最新版按钮
             InitializeComponent();
 
             Loaded += MainWindow_Loaded;
