@@ -70,8 +70,6 @@ namespace GitIconOverlayHandlers
             }
         }
 
-        public const GitStatus PrioritizedStatus = GitStatus.Pushed;
-
         private static readonly string _iconsFloder = _rootFloder.Combine("icons");
 
         protected override Icon GetOverlayIcon()
@@ -100,17 +98,25 @@ namespace GitIconOverlayHandlers
 
         private static readonly Map<string, GitStatus> _statusMap = new Map<string, GitStatus>();
 
+        /// <summary>
+        /// ASCII码排序访问？
+        /// </summary>
+        public const GitStatus FirstAccessStatus = GitStatus.Committed;
+
         protected override bool CanShowOverlay(string path, FILE_ATTRIBUTE attributes)
         {
             try
             {
-                LogUtil.Log("Process {0} is getting the show state of {1} about status {2}.", ApplicationUtil.ProcessName, path, Status);
+                if (ApplicationUtil.ProcessName != "explorer")
+                    return false;
 
                 //把优先级最高的结果缓存 低优先级直接读缓存
                 if (_notGitList.Contains(path))
                     return false;
 
-                if (Status == PrioritizedStatus)
+                LogUtil.Log("Process {0} is getting the show state of status {1} with path {2}.", ApplicationUtil.ProcessName, Status, path);
+
+                if (Status == FirstAccessStatus)
                 {
                     _pathStatus = GitUtil.GetStatus(path);
                     if (_pathStatus == GitStatus.Unknown)
@@ -126,6 +132,7 @@ namespace GitIconOverlayHandlers
             }
             catch (Exception ex)
             {
+                ex.HelpLink = path;
                 LogUtil.Log(ex);
                 return false;
             }
