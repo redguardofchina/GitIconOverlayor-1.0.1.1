@@ -18,11 +18,12 @@ namespace GitIconOverlayHandlers
         static GitIconOverlayHandler()
         {
             PathConfig.SetRootFloder(_rootFloder);
+            LogUtil.Log("Process {0} is startting handlers.", ApplicationUtil.ProcessName);
         }
 
         protected GitIconOverlayHandler() : base()
         {
-            LogUtil.Log("Process: " + ApplicationUtil.ProcessName);
+            LogUtil.Log("Process {0} is newing a handler of status {1}.", ApplicationUtil.ProcessName, Status);
         }
 
         /// <summary>
@@ -35,7 +36,7 @@ namespace GitIconOverlayHandlers
         /// </summary>
         protected override int GetPriority()
         {
-            //LogUtil.Log(Status + " GetPriority");
+            LogUtil.Log("Process {0} is getting the priority of status {1}.", ApplicationUtil.ProcessName, Status);
 
             //根据GetStatus方法推导
             //switch (Status)
@@ -75,7 +76,7 @@ namespace GitIconOverlayHandlers
 
         protected override Icon GetOverlayIcon()
         {
-            //LogUtil.Log(Status + " GetOverlayIcon");
+            LogUtil.Log("Process {0} is getting the icon of status {1}.", ApplicationUtil.ProcessName, Status);
 
             switch (Status)
             {
@@ -103,7 +104,7 @@ namespace GitIconOverlayHandlers
         {
             try
             {
-                //LogUtil.Log(Status + " CanShowOverlay: " + path);
+                LogUtil.Log("Process {0} is getting the show state of {1} about status {2}.", ApplicationUtil.ProcessName, path, Status);
 
                 //把优先级最高的结果缓存 低优先级直接读缓存
                 if (_notGitList.Contains(path))
