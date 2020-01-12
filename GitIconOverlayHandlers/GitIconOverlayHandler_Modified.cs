@@ -8,6 +8,6 @@ namespace GitIconOverlayHandlers
     [RegistrationName("  GitModified")]
     public class GitIconOverlayHandler_Modified : GitIconOverlayHandler
     {
-        public override GitStatus Status { get; set; } = GitStatus.Modified;
+        public override GitStatus Status { get; } = GitStatus.Modified;
     }
 }

@@ -8,6 +8,6 @@ namespace GitIconOverlayHandlers
     [RegistrationName("  GitCommitted")]
     public class GitIconOverlayHandler_Committed : GitIconOverlayHandler
     {
-        public override GitStatus Status { get; set; } = GitStatus.Committed;
+        public override GitStatus Status { get; } = GitStatus.Committed;
     }
 }

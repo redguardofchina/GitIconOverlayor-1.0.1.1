@@ -8,6 +8,6 @@ namespace GitIconOverlayHandlers
     [RegistrationName("  GitConflict")]
     public class GitIconOverlayHandler_Conflict : GitIconOverlayHandler
     {
-        public override GitStatus Status { get; set; } = GitStatus.Conflict;
+        public override GitStatus Status { get; } = GitStatus.Conflict;
     }
 }

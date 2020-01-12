@@ -2,21 +2,26 @@
 using SharpShell.Interop;
 using SharpShell.SharpIconOverlayHandler;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 
 namespace GitIconOverlayHandlers
 {
     public class GitIconOverlayHandler : SharpIconOverlayHandler
     {
-        public virtual GitStatus Status { get; set; }
+        public virtual GitStatus Status { get; }
 
         public const string RootFloderFiled = "GitIconOverlayorFloder";
 
-        private static string _rootFloder = RegeditUtil.GetFromConfig(RootFloderFiled);
+        private static readonly string _rootFloder = RegeditUtil.GetFromConfig(RootFloderFiled);
 
         static GitIconOverlayHandler()
         {
             PathConfig.SetRootFloder(_rootFloder);
+        }
+
+        protected GitIconOverlayHandler() : base()
+        {
             LogUtil.Log("Process: " + ApplicationUtil.ProcessName);
         }
 
@@ -64,7 +69,9 @@ namespace GitIconOverlayHandlers
             }
         }
 
-        private static string _iconsFloder = _rootFloder.Combine("icons");
+        public const GitStatus PrioritizedStatus = GitStatus.Pushed;
+
+        private static readonly string _iconsFloder = _rootFloder.Combine("icons");
 
         protected override Icon GetOverlayIcon()
         {
@@ -86,14 +93,35 @@ namespace GitIconOverlayHandlers
             }
         }
 
+        private static readonly HashSet<string> _notGitList = new HashSet<string>();
+
+        private GitStatus _pathStatus;
+
+        private static readonly Map<string, GitStatus> _statusMap = new Map<string, GitStatus>();
+
         protected override bool CanShowOverlay(string path, FILE_ATTRIBUTE attributes)
         {
-            //LogUtil.Log(Status + " CanShowOverlay: " + path);
-
             try
             {
-                //todo 把优先级最高的结果缓存 低优先级直接读缓存
-                return Status == GitUtil.GetStatus(path);
+                //LogUtil.Log(Status + " CanShowOverlay: " + path);
+
+                //把优先级最高的结果缓存 低优先级直接读缓存
+                if (_notGitList.Contains(path))
+                    return false;
+
+                if (Status == PrioritizedStatus)
+                {
+                    _pathStatus = GitUtil.GetStatus(path);
+                    if (_pathStatus == GitStatus.Unknown)
+                        _notGitList.Add(path);
+                    else
+                        _statusMap[path] = _pathStatus;
+                }
+                else
+                {
+                    _pathStatus = _statusMap.Get(path);
+                }
+                return Status == _pathStatus;
             }
             catch (Exception ex)
             {
