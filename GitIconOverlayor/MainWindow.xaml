@@ -3,5 +3,6 @@
         <Button Content="install" HorizontalAlignment="Center" Margin="0,30,200,0" VerticalAlignment="Top" Width="75" Name="ButtonInstall" />
         <Button Content="uninstall" HorizontalAlignment="Center" Margin="200,30,0,0" VerticalAlignment="Top" Width="75" Name="ButtonUninstall" />
         <TextBox HorizontalAlignment="Center" Height="300" Margin="0,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="500" VerticalScrollBarVisibility="Visible" IsReadOnly="True" Name="TextBoxLog" />
+        <Button Content="Update" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Foreground="Blue" Name="LabelUpdate" Background="Transparent" />
     </Grid>
 </Window>

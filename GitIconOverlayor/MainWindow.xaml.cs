@@ -15,13 +15,13 @@ namespace GitIconOverlayor
     {
         public MainWindow()
         {
-            //todo 查看最新版按钮
             InitializeComponent();
 
             Loaded += MainWindow_Loaded;
 
             ButtonInstall.Click += ButtonInstall_Click;
             ButtonUninstall.Click += ButtonUninstall_Click;
+            LabelUpdate.Click += LabelUpdate_Click;
         }
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
@@ -47,6 +47,11 @@ namespace GitIconOverlayor
             TextBoxLog.Log("RemoveFromRegeditConfig: " + GitIconOverlayHandler.RootFloderFiled);
             TextBoxLog.Log(ProcessUtil.Run(_asmPath, _dllPath + " /u"));
             MessageBox.Show("卸载完成，重启后生效，重启后可手动删除此文件夹");
+        }
+
+        private void LabelUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            UrlUtil.Open("https://gitee.com/atalent/GitIconOverlayor/releases");
         }
     }
 }
