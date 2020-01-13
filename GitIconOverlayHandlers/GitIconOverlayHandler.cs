@@ -11,6 +11,9 @@ namespace GitIconOverlayHandlers
     {
         public virtual GitStatus Status { get; }
 
+        //RegistrationName的ASCII码排序决定了访问优先级 可以按照这个理论定义RegistrationName和FirstAccessStatus，以达到效率优化
+        public const GitStatus FirstAccessStatus = GitStatus.Pushed;
+
         public const string RootFloderFiled = "GitIconOverlayorFloder";
 
         private static readonly string _rootFloder = RegeditUtil.GetFromConfig(RootFloderFiled);
@@ -32,42 +35,14 @@ namespace GitIconOverlayHandlers
         public const int Priority = 60;
 
         /// <summary>
-        /// 获取状态优先级 0-100 越小优先级越高
+        /// 获取图标覆盖优先级
+        /// 优先级高的图标返回True优先级低的判断也不会停止，所以不需要分级
         /// </summary>
         protected override int GetPriority()
         {
             LogUtil.Log("Process {0} is getting the priority of status {1}", ApplicationUtil.ProcessName, Status);
 
-            //根据GetStatus方法推导
-            //switch (Status)
-            //{
-            //    case GitStatus.Conflict:
-            //        return Priority + 0;
-            //    case GitStatus.Modified:
-            //        return Priority + 3;
-            //    case GitStatus.Committed:
-            //        return Priority + 6;
-            //    case GitStatus.Pushed:
-            //        return Priority + 9;
-            //    default://按照逻辑Status不会出现这种情况
-            //        return 100;
-            //}
-
-            //根据状态频率推导
-            switch (Status)
-            {
-                case GitStatus.Pushed:
-                    return Priority + 0;
-                case GitStatus.Committed:
-                    return Priority + 3;
-                case GitStatus.Modified:
-                    return Priority + 6;
-                case GitStatus.Conflict:
-                    return Priority + 9;
-                default://按照逻辑Status不会出现这种情况
-                    LogUtil.Log("Has Bug !!!");
-                    return 100;
-            }
+            return Priority;
         }
 
         private static readonly string _iconsFloder = _rootFloder.Combine("icons");
@@ -95,11 +70,6 @@ namespace GitIconOverlayHandlers
         private static readonly List<string> _notGitList = new List<string>();//HashSet<string>有个空指针异常，怀疑其线程不安全
 
         private static readonly Map<string, GitStatus> _statusMap = new Map<string, GitStatus>();
-
-        /// <summary>
-        /// ASCII码排序访问？
-        /// </summary>
-        public const GitStatus FirstAccessStatus = GitStatus.Committed;
 
         protected override bool CanShowOverlay(string path, FILE_ATTRIBUTE attributes)
         {

@@ -14,10 +14,10 @@ namespace GitIconOverlayHandlers_Test
         {
             RegeditUtil.SetToConfig(GitIconOverlayHandler.RootFloderFiled, PathUtil.Base);
 
-            var hander1 = new GitIconOverlayHandler_Committed();
-            var hander2 = new GitIconOverlayHandler_Conflict();
-            var hander3 = new GitIconOverlayHandler_Modified();
-            var hander4 = new GitIconOverlayHandler_Pushed();
+            var hander1 = new GitIconOverlayHandler_3Committed();
+            var hander2 = new GitIconOverlayHandler_9Conflict();
+            var hander3 = new GitIconOverlayHandler_6Modified();
+            var hander4 = new GitIconOverlayHandler_1Pushed();
 
             var path1 = @"D:\Subversion";
             var path2 = @"D:\Subversion\GitIconOverlayor";

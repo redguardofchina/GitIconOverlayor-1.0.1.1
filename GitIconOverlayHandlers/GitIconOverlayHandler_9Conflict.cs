@@ -5,8 +5,8 @@ using System.Runtime.InteropServices;
 namespace GitIconOverlayHandlers
 {
     [ComVisible(true)]
-    [RegistrationName("  GitConflict")]
-    public class GitIconOverlayHandler_Conflict : GitIconOverlayHandler
+    [RegistrationName("  9GitConflict")]
+    public class GitIconOverlayHandler_9Conflict : GitIconOverlayHandler
     {
         public override GitStatus Status { get; } = GitStatus.Conflict;
     }

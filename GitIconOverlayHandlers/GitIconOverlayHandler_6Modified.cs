@@ -5,8 +5,8 @@ using System.Runtime.InteropServices;
 namespace GitIconOverlayHandlers
 {
     [ComVisible(true)]
-    [RegistrationName("  GitModified")]
-    public class GitIconOverlayHandler_Modified : GitIconOverlayHandler
+    [RegistrationName("  6GitModified")]
+    public class GitIconOverlayHandler_6Modified : GitIconOverlayHandler
     {
         public override GitStatus Status { get; } = GitStatus.Modified;
     }
