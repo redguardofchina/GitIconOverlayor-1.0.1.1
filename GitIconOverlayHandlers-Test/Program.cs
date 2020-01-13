@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CommonUtils;
+using GitIconOverlayHandlers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +12,27 @@ namespace GitIconOverlayHandlers_Test
     {
         static void Main(string[] args)
         {
+            RegeditUtil.SetToConfig(GitIconOverlayHandler.RootFloderFiled, PathUtil.Base);
+
+            var hander1 = new GitIconOverlayHandler_Committed();
+            var hander2 = new GitIconOverlayHandler_Conflict();
+            var hander3 = new GitIconOverlayHandler_Modified();
+            var hander4 = new GitIconOverlayHandler_Pushed();
+
+            var path1 = @"D:\Subversion";
+            var path2 = @"D:\Subversion\GitIconOverlayor";
+
+            hander1.GetIconOverlayState(path1);
+            hander2.GetIconOverlayState(path1);
+            hander3.GetIconOverlayState(path1);
+            hander4.GetIconOverlayState(path1);
+
+            hander1.GetIconOverlayState(path2);
+            hander2.GetIconOverlayState(path2);
+            hander3.GetIconOverlayState(path2);
+            hander4.GetIconOverlayState(path2);
+
+            ConsoleUtil.Pause();
         }
     }
 }
