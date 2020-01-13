@@ -18,12 +18,12 @@ namespace GitIconOverlayHandlers
         static GitIconOverlayHandler()
         {
             PathConfig.SetRootFloder(_rootFloder);
-            LogUtil.Log("Process {0} is startting handlers.", ApplicationUtil.ProcessName);
+            LogUtil.Log("Process {0} is startting handlers", ApplicationUtil.ProcessName);
         }
 
         protected GitIconOverlayHandler() : base()
         {
-            LogUtil.Log("Process {0} is newing a handler of status {1}.", ApplicationUtil.ProcessName, Status);
+            LogUtil.Log("Process {0} is newing a handler of status {1}", ApplicationUtil.ProcessName, Status);
         }
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace GitIconOverlayHandlers
         /// </summary>
         protected override int GetPriority()
         {
-            LogUtil.Log("Process {0} is getting the priority of status {1}.", ApplicationUtil.ProcessName, Status);
+            LogUtil.Log("Process {0} is getting the priority of status {1}", ApplicationUtil.ProcessName, Status);
 
             //根据GetStatus方法推导
             //switch (Status)
@@ -74,7 +74,7 @@ namespace GitIconOverlayHandlers
 
         protected override Icon GetOverlayIcon()
         {
-            LogUtil.Log("Process {0} is getting the icon of status {1}.", ApplicationUtil.ProcessName, Status);
+            LogUtil.Log("Process {0} is getting the icon of status {1}", ApplicationUtil.ProcessName, Status);
 
             switch (Status)
             {
@@ -92,9 +92,7 @@ namespace GitIconOverlayHandlers
             }
         }
 
-        private static readonly HashSet<string> _notGitList = new HashSet<string>();
-
-        private GitStatus _pathStatus;
+        private static readonly List<string> _notGitList = new List<string>();//HashSet<string>有个空指针异常，怀疑其线程不安全
 
         private static readonly Map<string, GitStatus> _statusMap = new Map<string, GitStatus>();
 
@@ -111,31 +109,39 @@ namespace GitIconOverlayHandlers
                     return false;
 
                 //把优先级最高的结果缓存 低优先级直接读缓存
+
                 if (_notGitList.Contains(path))
                     return false;
 
-                LogUtil.Log("Process {0} is getting the show state of status {1} with path {2}.", ApplicationUtil.ProcessName, Status, path);
+                //LogUtil.Log("{0}: Process is getting the show state of {1}", Status, path);
 
+                GitStatus pathStatus;
                 if (Status == FirstAccessStatus)
                 {
-                    _pathStatus = GitUtil.GetStatus(path);
-                    if (_pathStatus == GitStatus.Unknown)
+                    pathStatus = GitUtil.GetStatus(path);
+                    if (pathStatus == GitStatus.Unknown)
                         _notGitList.Add(path);
                     else
-                        _statusMap[path] = _pathStatus;
+                        _statusMap[path] = pathStatus;
                 }
                 else
                 {
-                    _pathStatus = _statusMap.Get(path);
+                    pathStatus = _statusMap.Get(path);
                 }
-                return Status == _pathStatus;
+
+                //LogUtil.Log("{0}: Process has got the show state of {1}", Status, path);
+
+                return Status == pathStatus;
             }
             catch (Exception ex)
             {
-                ex.HelpLink = path;
+                ex.HelpLink = Status + " " + path;
                 LogUtil.Log(ex);
                 return false;
             }
         }
+
+        public bool GetIconOverlayState(string path)
+        => CanShowOverlay(path, FILE_ATTRIBUTE.FILE_ATTRIBUTE_NORMAL);
     }
 }

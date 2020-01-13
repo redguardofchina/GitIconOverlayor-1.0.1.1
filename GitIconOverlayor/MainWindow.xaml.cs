@@ -26,7 +26,8 @@ namespace GitIconOverlayor
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            TextBoxLog.Log("优先级：" + GitIconOverlayHandler.Priority + "~" + (GitIconOverlayHandler.Priority + 10));
+            TextBoxLog.Log("Priority Range：" + GitIconOverlayHandler.Priority + "~" + (GitIconOverlayHandler.Priority + 10));
+            TextBoxLog.Log("FirstAccessStatus：" + GitIconOverlayHandler.FirstAccessStatus);
         }
 
         private static string _asmPath = "RegAsm.exe";
