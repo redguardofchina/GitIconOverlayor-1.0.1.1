@@ -26,7 +26,7 @@ namespace GitIconOverlayor
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            TextBoxLog.Log("Priority Range：" + GitIconOverlayHandler.Priority + "~" + (GitIconOverlayHandler.Priority + 10));
+            TextBoxLog.Log("Overlay Priority：" + GitIconOverlayHandler.Priority);
             TextBoxLog.Log("FirstAccessStatus：" + GitIconOverlayHandler.FirstAccessStatus);
         }
 
