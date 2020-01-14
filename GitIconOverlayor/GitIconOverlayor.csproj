@@ -106,6 +106,10 @@
     <None Include="documents\~uninstall.cmd" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\CommonUtils-dot-net\CommonUtils.Framework\CommonUtils.Framework.csproj">
+      <Project>{0a1c8c00-ded3-4bf8-a9df-36d6f0652bc6}</Project>
+      <Name>CommonUtils.Framework</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\CommonUtils-dot-net\CommonUtils\CommonUtils.csproj">
       <Project>{173ba26b-af8c-4949-a7ce-1e832296adfe}</Project>
       <Name>CommonUtils</Name>
