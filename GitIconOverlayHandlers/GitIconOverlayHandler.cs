@@ -80,28 +80,19 @@ namespace GitIconOverlayHandlers
 
                 //把优先级最高的结果缓存 低优先级直接读缓存
 
-                if (_notGitList.Contains(path))
-                    return false;
+                //if (_notGitList.Contains(path))
+                //    return false;
 
                 //LogUtil.Log("{0}: Process is getting the show state of {1}", Status, path);
 
-                GitStatus pathStatus;
                 if (Status == FirstAccessStatus)
-                {
-                    pathStatus = GitUtil.GetStatus(path);
-                    if (pathStatus == GitStatus.Unknown)
-                        _notGitList.Add(path);
-                    else
-                        _statusMap[path] = pathStatus;
-                }
-                else
-                {
-                    pathStatus = _statusMap.Get(path);
-                }
+                    _statusMap[path] = GitUtil.GetStatus(path);
+
+                //_notGitList.Add(path);空文件夹检出项目时会混乱 虽然降效率了 没有太好的办法
 
                 //LogUtil.Log("{0}: Process has got the show state of {1}", Status, path);
 
-                return Status == pathStatus;
+                return Status == _statusMap[path];
             }
             catch (Exception ex)
             {
