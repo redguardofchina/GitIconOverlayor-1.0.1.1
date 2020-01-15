@@ -127,6 +127,11 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Win32.Registry">
+      <Version>4.7.0</Version>
+    </PackageReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>::xcopy $(SolutionDir)Git $(TargetDir)Git\ /s /y /d</PreBuildEvent>
