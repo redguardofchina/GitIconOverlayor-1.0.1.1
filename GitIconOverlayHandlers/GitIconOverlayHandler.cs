@@ -16,7 +16,7 @@ namespace GitIconOverlayHandlers
 
         public const string RootFloderFiled = "GitIconOverlayorFloder";
 
-        private static readonly string _rootFloder = RegeditUtil.GetFromConfig(RootFloderFiled);
+        private static readonly string _rootFloder = RegistryUtil.GetFromConfig(RootFloderFiled);
 
         static GitIconOverlayHandler()
         {

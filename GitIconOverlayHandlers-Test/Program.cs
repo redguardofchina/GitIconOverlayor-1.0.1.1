@@ -12,7 +12,7 @@ namespace GitIconOverlayHandlers_Test
     {
         static void Main(string[] args)
         {
-            RegeditUtil.SetToConfig(GitIconOverlayHandler.RootFloderFiled, PathUtil.Base);
+            RegistryUtil.SetToConfig(GitIconOverlayHandler.RootFloderFiled, PathUtil.Base);
 
             var hander1 = new GitIconOverlayHandler_3Committed();
             var hander2 = new GitIconOverlayHandler_9Conflict();

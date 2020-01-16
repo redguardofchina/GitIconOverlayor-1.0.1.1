@@ -35,7 +35,7 @@ namespace GitIconOverlayor
 
         private void ButtonInstall_Click(object sender, RoutedEventArgs e)
         {
-            RegeditUtil.SetToConfig(GitIconOverlayHandler.RootFloderFiled, PathUtil.Base);
+            RegistryUtil.SetToConfig(GitIconOverlayHandler.RootFloderFiled, PathUtil.Base);
             TextBoxLog.Log("SetToRegeditConfig: " + GitIconOverlayHandler.RootFloderFiled + " = " + PathUtil.Base);
             TextBoxLog.Log(ProcessUtil.Run(_asmPath, _dllPath + " /codebase"));
             MessageBox.Show("安装完成，重启后生效，请保留此文件夹");
@@ -43,7 +43,7 @@ namespace GitIconOverlayor
 
         private void ButtonUninstall_Click(object sender, RoutedEventArgs e)
         {
-            RegeditUtil.RemoveFromConfig(GitIconOverlayHandler.RootFloderFiled);
+            RegistryUtil.RemoveFromConfig(GitIconOverlayHandler.RootFloderFiled);
             TextBoxLog.Log("RemoveFromRegeditConfig: " + GitIconOverlayHandler.RootFloderFiled);
             TextBoxLog.Log(ProcessUtil.Run(_asmPath, _dllPath + " /u"));
             MessageBox.Show("卸载完成，重启后生效，重启后可手动删除此文件夹");
